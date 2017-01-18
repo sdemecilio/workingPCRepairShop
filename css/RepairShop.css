@@ -1,0 +1,24 @@
+body {
+    width: 75%;
+    padding: 5px;
+    margin: auto auto 15%;
+}
+
+.title {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.requiredFields {
+    color: red;
+    font-weight: bold;
+}
+
+.heading {
+    font-size: 115%;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    color: #7fffd4;
+}
