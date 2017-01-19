@@ -1,7 +1,7 @@
 body {
     width: 75%;
     padding: 5px;
-    margin: auto auto 15%;
+    margin: auto auto 5%;
 }
 
 .title {
@@ -20,5 +20,5 @@ body {
     font-weight: bold;
     text-align: center;
     font-style: italic;
-    color: #7fffd4;
+    color: darkgreen;
 }
