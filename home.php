@@ -15,6 +15,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <html>
 <!-- CSS libraries -->
 <link rel = "stylesheet" href = "css/RepairShop.css">
+<link rel = "stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 <body>
 
 <h1>PC Repair Shop</h1>
@@ -27,24 +29,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <p id = "errorMessage" class = "requiredFields">We cannot work on your computer. Please see a tech for questions.</p>
 <button> <a href = "GRworkOrderForm.php">Green River Community</a></button>&nbsp;&nbsp;<button>Public</button>
 
-</body>
 <footer>Contact"<a href ="mailto:arobinson@greenriver.edu">arobinson@greenriver.edu</a>"</footer>
+
+
 <!-- including the jquery library from the jquery website -->
-<script src = "http://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src = "javascript/RepairShop.js"></script>
 
-<script>
-    $('#YesWarranty').click(function() {
-        $('button').hide();
-        $('#errorMessage').show();
-    });
+</body>
 
-    $('#no').click(function() {
-        $('button').show();
-        $('#errorMessage').hide();
-    });
 
-    $('#errorMessage').hide();
-    $('button').hide();
-
-</script>
 </html>
