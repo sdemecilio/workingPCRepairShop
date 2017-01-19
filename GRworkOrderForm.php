@@ -43,6 +43,8 @@
                 </p>
             </fieldset>
 
+            <br>
+
             <fieldset>
                 <legend>Computer Information</legend>
                 <p>Is your computer language English?
@@ -62,6 +64,8 @@
                     <b>Customer Initials: </b> <input type = "text" name = "cInitials">
                 </p>
             </fieldset>
+
+            <br>
 
             <fieldset>
                 <legend>Types of Issues</legend>
@@ -84,6 +88,8 @@
                 <p>Other: <input type = "text" name = "other"></p>
             </fieldset>
 
+            <br>
+
             <fieldset>
                 <legend>Office Use Only</legend>
                 <p>
@@ -104,23 +110,31 @@
                 </p>
             </fieldset>
 
+            <br>
+
             <fieldset>
                 <legend>Work Order</legend>
                     <b>Grand total (without taxes): $</b>
             </fieldset>
+
+            <p class = "heading">RELEASE AND HOLD HARMLESS AGREEMENT</p>
+            <p>
+                The Green River PC Repair Shop will not be held liable for ANY services performed on ANY equipment received by the Party or Parties below. Further, if we are       unable to repair any equipment received, the Green River PC Repair Shop or its members, will not be responsible for replacing hardware, software, or information lost or damaged during diagnostics of, and or repairing of the equipment received from any intended parties.
+            </p>
+
+            <p class = "heading">ACKNOWLEDGEMENT OF RISK</p>
+            <p>I, ___________________________________, acknowledge that I have read the above statements and definitions, and hereby indemnify and hold harmless, Green River PC Repair Shop, and its students or advisors from any liability arising from accident, theft, or damages to all equipment and property. I have received a copy of Green River PC Repair Shop's Policies and will adhere to them strictly. This agreement shall continue for each and every visit to Green River PC Repair Shop's property.</p>
+            <p>The terms of this release form shall be constructed as the entire agreement and may not be altered, amended, or modified except in writing and signed by both parties. The terms of this release shall be governed by the laws of the State of Washington.</p>
+            <p>
+                <b>Customer Signature:____________________________________________ &nbsp;&nbsp;
+                    Date:_______________________________</b>
+            </p>
+
+            <br>
+
+            <button>Submit</button>
         </form>
 
-    <p class = "heading">RELEASE AND HOLD HARMLESS AGREEMENT</p>
-    <p>
-        The Green River PC Repair Shop will not be held liable for ANY services performed on ANY equipment received by the Party or Parties below. Further, if we are unable to repair any equipment received, the Green River PC Repair Shop or its members, will not be responsible for replacing hardware, software, or information lost or damaged during diagnostics of, and or repairing of the equipment received from any intended parties.
-    </p>
-
-        <p class = "heading">Acknowledgement of Risk</p>
-        <p>I, ___________________________________, acknowledge that I have read the above statements and definitions, and hereby indemnify and hold harmless, Green River PC Repair Shop, and its students or advisors from any liability arising from accident, theft, or damages to all equipment and property. I have received a copy of Green River PC Repair Shop's Policies and will adhere to them strictly. This agreement shall continue for each and every visit to Green River PC Repair Shop's property.</p>
-    <p>The terms of this release form shall be constructed as the entire agreement and may not be altered, amended, or modified except in writing and signed by both parties. The terms of this release shall be governed by the laws of the State of Washington. <br>
-    <b>Date:__________________________ &nbsp;&nbsp;
-        Customer Signature:_____________________________________</b>
-    </p>
 
 
 
