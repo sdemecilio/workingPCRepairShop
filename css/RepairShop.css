@@ -22,3 +22,9 @@ body {
     font-style: italic;
     color: darkgreen;
 }
+
+/* image styling */
+.logo {
+    height: 75%;
+    align: center;
+}
