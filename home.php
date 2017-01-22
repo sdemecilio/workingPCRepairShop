@@ -13,13 +13,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  */
 ?>
 <html>
+<head>
+    <title>GR Repair Sop</title>
 <!-- CSS libraries -->
 <link rel = "stylesheet" href = "css/RepairShop.css">
 <link rel = "stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
 
 <body>
 
-<h1>PC Repair Shop</h1>
+<img src = "images/grcRepairLogo.jpg" class = "logo">
+
 <form action="">
     <p>Is your computer under warranty?</p>
   <input type="radio" name="warranty" value="yes" id = "YesWarranty"> Yes<br>
