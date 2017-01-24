@@ -5,6 +5,10 @@ body {
     background-color: darkgreen;
 }
 
+image {
+    alignment: center;
+}
+
 footer {
-   align: center;
+   alignment: center;
 }
