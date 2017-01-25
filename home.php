@@ -17,7 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <title>GR Repair Sop</title>
 <!-- CSS libraries -->
 <link rel = "stylesheet" href = "css/RepairShop.css">
-<link rel = "stylesheet" href = "css/home.css">
+<!--<link rel = "stylesheet" href = "css/home.css">-->
 <link rel = "stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 

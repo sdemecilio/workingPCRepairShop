@@ -1,0 +1,14 @@
+body {
+    width: 75%;
+    padding: 5px;
+    margin: auto auto 5%;
+    background-color: darkgreen;
+}
+
+image {
+    alignment: center;
+}
+
+footer {
+   alignment: center;
+}
