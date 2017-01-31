@@ -1,0 +1,13 @@
+CREATE TABLE login (
+    firstName VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    email VARCHAR(150)PRIMARY KEY NOT NULL,
+    userPassword VARCHAR(20) NOT NULL default 'GRCrePair$hop',
+    accessType VArCHAR(20) NOT NULL);
+
+// example data
+INSERT INTO login VALUES
+    ('Spunky', 'Robinson', 'arobinson@greenriver.edu', 'PCrepair2017', 'admin'),
+    ('Kari', 'Shopbell', 'zshopbell@mail.greenriver.edu', 'GRC12345', 'admin');
+INSERT INTO login (firstName, lastName, email, accessType) VALUES
+('Jane', 'Doe', 'janedoe@mail.greenriver.edu', 'tech');
