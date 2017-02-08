@@ -1,5 +1,22 @@
 <?php
+
+/**
+    The MIT License (MIT)
+
+    Copyright (c) 2017 Stacey Demecilio, Shimbey Assie, Axumawit Gebregorgis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ */
+
+?>
+<?php
 include 'workCon.php';
+//include 'menu.php';
   
    if($_SERVER["REQUEST_METHOD"] == "POST")
    {
@@ -131,7 +148,7 @@ include 'workCon.php';
                 <div class = "requiredFields">* From must be completely filled out</div>
                 <p>Are you a Green River student or faculty memeber? &nbsp;&nbsp;
                 <input type = "radio" id = "student_faculty" name = "student_faculty" value="yes" <?php if (isset($_POST['student_faculty']) && $_POST['student_faculty']=='yes') {echo 'checked="checked"';}?> >Yes &nbsp;
-                <input type = "radio" id = "student_faculty" name = "student_faculty" value="no" <?php if (isset($_POST['student_faculty']) && $_POST['student_faculty']=='no') {echo 'checked="checked"';}?> >No 
+                <input type = "radio" id = "student_faculty1" name = "student_faculty" value="no" <?php if (isset($_POST['student_faculty']) && $_POST['student_faculty']=='no') {echo 'checked="checked"';}?> >No 
                 <div style="color: red"<p><?php if(isset($errors['student_faculty1'])) echo $errors['student_faculty1']; ?></p></div>
                 </p>
                 
@@ -319,8 +336,9 @@ include 'workCon.php';
 
 
     <!-- including the jquery library from the jquery website -->
- <!--   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src = "../dependencies/js/workOrder.js"></script>-->
+<!--    <script src = "../dependencies/js/workOrder.js"></script>-->
+     <script src = "javascript/CWorkOrder.js"></script>
     </body>
 </html>

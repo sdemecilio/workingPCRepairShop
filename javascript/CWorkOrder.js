@@ -1,13 +1,13 @@
-$("#btn-submit").click(function() {
-    alert("Thank you. Your service order has been submitted.");
-});
+//$("#btn-submit").click(function() {
+//    alert("Thank you. Your service order has been submitted.");
+//});
 
 // if user answers no to being a Green River memeber, GR ID field is disabled
-$('#GRNo').click(function() {
-    $('#ID').prop("disabled", true);
+$('#student_faculty1').click(function() {
+    $('#greenriverID').prop("disabled", true);
 });
 
 // allows for GR ID field to be enabled/disabled between answers
-$('#GRYes').click(function() {
-    $('#ID').prop("disabled", false);
+$('#student_faculty').click(function() {
+    $('#greenriverID').prop("disabled", false);
 });
