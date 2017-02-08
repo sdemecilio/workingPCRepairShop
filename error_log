@@ -1,1 +1,46 @@
 [19-Jan-2017 13:12:28 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/pcrepair/public_html/working/home.php on line 15
+[05-Feb-2017 16:07:29 America/Chicago] PHP Warning:  require(../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:07:29 America/Chicago] PHP Warning:  require(../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:07:29 America/Chicago] PHP Fatal error:  require(): Failed opening required '../../databseConnect.php' (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:07:39 America/Chicago] PHP Warning:  require(../../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:07:39 America/Chicago] PHP Warning:  require(../../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:07:39 America/Chicago] PHP Fatal error:  require(): Failed opening required '../../../databseConnect.php' (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:17 America/Chicago] PHP Warning:  require(../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:17 America/Chicago] PHP Warning:  require(../../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:17 America/Chicago] PHP Fatal error:  require(): Failed opening required '../../databseConnect.php' (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:32 America/Chicago] PHP Warning:  require(../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:32 America/Chicago] PHP Warning:  require(../databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:32 America/Chicago] PHP Fatal error:  require(): Failed opening required '../databseConnect.php' (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:44 America/Chicago] PHP Warning:  require(databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:44 America/Chicago] PHP Warning:  require(databseConnect.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[05-Feb-2017 16:08:44 America/Chicago] PHP Fatal error:  require(): Failed opening required 'databseConnect.php' (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/workOrderForm.php on line 15
+[06-Feb-2017 05:09:21 America/Chicago] PHP Fatal error:  Call to a member function bindParam() on a non-object in /home/pcrepair/public_html/working/workOrderForm.php on line 45
+[06-Feb-2017 05:09:43 America/Chicago] PHP Fatal error:  Call to a member function bindParam() on a non-object in /home/pcrepair/public_html/working/workOrderForm.php on line 46
+[06-Feb-2017 05:09:52 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 05:15:16 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 05:15:21 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 05:16:29 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 13:31:43 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 13:42:13 America/Chicago] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 13:56:02 America/Chicago] PHP Warning:  PDOStatement::execute() expects parameter 1 to be array, string given in /home/pcrepair/public_html/working/workOrderForm.php on line 49
+[06-Feb-2017 14:26:11 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/pcrepair/public_html/working/workOrderForm.php on line 29
+[06-Feb-2017 14:26:27 America/Chicago] PHP Parse error:  syntax error, unexpected '?>' in /home/pcrepair/public_html/working/workOrderForm.php on line 54
+[06-Feb-2017 14:26:40 America/Chicago] PHP Parse error:  syntax error, unexpected '?>' in /home/pcrepair/public_html/working/workOrderForm.php on line 54
+[06-Feb-2017 14:27:01 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/pcrepair/public_html/working/workOrderForm.php on line 29
+[06-Feb-2017 14:27:34 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/pcrepair/public_html/working/workOrderForm.php on line 30
+[07-Feb-2017 02:12:41 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/pcrepair/public_html/working/workOrderForm.php on line 30
+[07-Feb-2017 18:04:45 America/Chicago] PHP Fatal error:  Call to undefined function TIMESTAMP() in /home/pcrepair/public_html/working/workCon.php on line 29
+[07-Feb-2017 18:06:59 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/pcrepair/public_html/working/workCon.php:48
+Stack trace:
+#0 /home/pcrepair/public_html/working/workCon.php(48): PDOStatement->execute()
+#1 /home/pcrepair/public_html/working/workOrderForms.php(2): include('/home/pcrepair/...')
+#2 {main}
+  thrown in /home/pcrepair/public_html/working/workCon.php on line 48
+[07-Feb-2017 18:14:04 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/pcrepair/public_html/working/workCon.php:48
+Stack trace:
+#0 /home/pcrepair/public_html/working/workCon.php(48): PDOStatement->execute()
+#1 /home/pcrepair/public_html/working/workOrderForms.php(2): include('/home/pcrepair/...')
+#2 {main}
+  thrown in /home/pcrepair/public_html/working/workCon.php on line 48
+[07-Feb-2017 18:19:31 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/pcrepair/public_html/working/workCon.php:10) in /home/pcrepair/public_html/working/workCon.php on line 51
+[07-Feb-2017 22:44:00 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/workCon.php on line 47

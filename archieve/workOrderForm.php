@@ -11,6 +11,7 @@
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  */
+
 ?>
 
 <html>
@@ -26,15 +27,21 @@
         <p class = "title">Work Order</p>
         <hr>
         
-        <form id = "community_form" method = "post" action = "workOrderForm.php">
+        <form id = "community_form" method = "post" action = "successMessage.php">
             <!-- Customer information for work order -->
-            <fieldset>
+             <fieldset>
                 <legend>Customer Information</legend>
                 <div class = "requiredFields">* From must be completely filled out</div>
+                <p>Are you a Green River student or faculty memeber? &nbsp;&nbsp;<input type = "radio" id = "GRYes" name = "greenriver" value = "Yes">Yes &nbsp;
+                <input type = "radio" id = "GRNo" name = "greenriver" value = "No">No</p>
                 <p>First name: <input type = "text" name = "firstName" id = "firstName" required>
                     &nbsp;&nbsp;
                     Last name: <input type = "text" name = "lastName" id = "lastName" required>
+                    &nbsp;&nbsp;
+                    Green River ID: <input type = "number" name = "ID" id = "ID" required>
+                    
                 </p>
+                
                 <p>Email: <input type = "text" name = "email" id = "email" required>
                     &nbsp;&nbsp;
                     Phone number: <input type = "number" name = "phoneNumber" id = "phoneNumber" required>
@@ -46,8 +53,8 @@
             <fieldset>
                 <legend>Computer Information</legend>
                 <p>Is your computer language English?
-                    <input type = "radio" name = "compLang" id = "compLang" required>Yes
-                    <input type = "radio" name = "compLang" id = "compLang">No
+                    <input type = "radio" name = "compLang" id = "compLang"  value = "Yes" required>Yes
+                    <input type = "radio" name = "compLang" id = "compLang" value = "No">No
                 </p>
                 <p>Username: <input type = "text" name = "username" id = "username" required>
                     &nbsp;&nbsp;
@@ -56,8 +63,8 @@
                 <p>
                     <b>CCleaner:</b> is a freeware system optimization, privacy and cleaning tool. It removes unused files from you system allowing Windoes to run faster and freeing up valuable hard disk space. <br>
                     Do you want CCleaner removed from your Computer?
-                    <input type = "radio" name = "ccleaner" id = "ccleaner" required>Yes
-                    <input type = "radio" name = "ccleaner" id = "ccleaner">No
+                    <input type = "radio" name = "ccleaner" id = "ccleaner" value = "Yes"required>Yes
+                    <input type = "radio" name = "ccleaner" id = "ccleaner" value = "No">No
                     <br>
                     <b>Customer Initials: </b> <input type = "text" name = "cInitials" id = "cInitials" required>
                 </p>
