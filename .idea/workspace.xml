@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="797d5b0d-0564-4c59-8cfd-87d0ea21bc32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/navBar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/RepairShop.css" afterPath="$PROJECT_DIR$/css/RepairShop.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -243,7 +240,7 @@
       <workItem from="1485283771544" duration="1818000" />
       <workItem from="1485371281927" duration="612000" />
       <workItem from="1485974734191" duration="4173000" />
-      <workItem from="1486402723169" duration="9226000" />
+      <workItem from="1486402723169" duration="9851000" />
     </task>
     <task id="LOCAL-00001" summary="added home.css">
       <created>1485284396847</created>
@@ -259,11 +256,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485286263465</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="unused changes">
+      <created>1487016213728</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1487016213728</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26204000" />
+    <option name="totallyTimeSpent" value="26829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="139" y="0" width="1234" height="735" extended-state="0" />
@@ -324,7 +328,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added home.css" />
     <MESSAGE value="spcie up home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="spcie up home page" />
+    <MESSAGE value="unused changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="unused changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
