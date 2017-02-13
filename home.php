@@ -34,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <p id = "errorMessage" class = "requiredFields">We cannot work on your computer. Please see a tech for questions.</p>
 <button> <a href = "GRworkOrderForm.php">Green River Community</a></button>&nbsp;&nbsp;<button>Public</button>
 
-<footer>Contact"<a href ="mailto:arobinson@greenriver.edu">arobinson@greenriver.edu</a>"</footer>
+<footer>Contact"<a href ="mailto:arobinson@greenriver.edu">arobinson@greenriver.edu</a>"<img src = "images/star.jpg" class = "star"></footer>
 
 
 <!-- including the jquery library from the jquery website -->
