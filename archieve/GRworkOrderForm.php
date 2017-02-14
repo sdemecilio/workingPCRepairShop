@@ -11,13 +11,16 @@
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  */
-
 ?>
 
 <html>
     <head>
         <title>Green River Repair Shop</title>
 
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <!-- CSS libraries -->
         <link rel = "stylesheet" href = "css/RepairShop.css">
 
@@ -26,35 +29,31 @@
     <body>
         <p class = "title">Work Order</p>
         <hr>
-        
-        <form id = "community_form" method = "post" action = "successMessage.php">
-            <!-- Customer information for work order -->
-             <fieldset>
+           
+              <form id = "community_form" method = "post" action = "workOrderForm.php">
+                <!-- Customer information for work order -->
+            <fieldset>
                 <legend>Customer Information</legend>
                 <div class = "requiredFields">* From must be completely filled out</div>
-                <p>Are you a Green River student or faculty memeber? &nbsp;&nbsp;<input type = "radio" id = "GRYes" name = "greenriver" value = "Yes">Yes &nbsp;
-                <input type = "radio" id = "GRNo" name = "greenriver" value = "No">No</p>
+
                 <p>First name: <input type = "text" name = "firstName" id = "firstName" required>
                     &nbsp;&nbsp;
                     Last name: <input type = "text" name = "lastName" id = "lastName" required>
-                    &nbsp;&nbsp;
-                    Green River ID: <input type = "number" name = "ID" id = "ID" required>
-                    
+                    &nbsp; &nbsp;
+                    Student / Faculty ID: <input type = "text" name = "ID" id = "id">
                 </p>
-                
-                <p>Email: <input type = "text" name = "email" id = "email" required>
+                <p>Green River email: <input type = "text" name = "email" id = "email" required>
                     &nbsp;&nbsp;
                     Phone number: <input type = "number" name = "phoneNumber" id = "phoneNumber" required>
                 </p>
             </fieldset>
             <br>
-            
             <!-- Computer information for work order -->
             <fieldset>
                 <legend>Computer Information</legend>
                 <p>Is your computer language English?
-                    <input type = "radio" name = "compLang" id = "compLang"  value = "Yes" required>Yes
-                    <input type = "radio" name = "compLang" id = "compLang" value = "No">No
+                    <input type = "radio" name = "compLang" id = "compLang" required>Yes
+                    <input type = "radio" name = "compLang" id = "compLang">No
                 </p>
                 <p>Username: <input type = "text" name = "username" id = "username" required>
                     &nbsp;&nbsp;
@@ -63,18 +62,16 @@
                 <p>
                     <b>CCleaner:</b> is a freeware system optimization, privacy and cleaning tool. It removes unused files from you system allowing Windoes to run faster and freeing up valuable hard disk space. <br>
                     Do you want CCleaner removed from your Computer?
-                    <input type = "radio" name = "ccleaner" id = "ccleaner" value = "Yes"required>Yes
-                    <input type = "radio" name = "ccleaner" id = "ccleaner" value = "No">No
+                    <input type = "radio" name = "ccleaner" id = "ccleaner" required>Yes
+                    <input type = "radio" name = "ccleaner" id = "ccleaner">No
                     <br>
                     <b>Customer Initials: </b> <input type = "text" name = "cInitials" id = "cInitials" required>
                 </p>
             </fieldset>
             <br>
-            
             <!-- Issues with computer, user will check all that apply -->
             <fieldset>
                 <legend>Types of Issues</legend>
-                
                 <input type = "checkbox" name = "issues" value = "acAdapter">AC Adapter<br>
                 <input type = "checkbox" name = "issues" value = "keyboard">Keyboard<br>
                 <input type = "checkbox" name = "issues" value = "heatSink">Heat Sink<br>
@@ -122,7 +119,7 @@
                 <legend>Work Order</legend>
                     <b>Grand total (without taxes): $</b>
             </fieldset>
-    
+
             <!-- Acknowledgements and Agreements -->
             <p class = "heading">RELEASE AND HOLD HARMLESS AGREEMENT</p>
             <p>
@@ -138,16 +135,15 @@
             </p>
 
             <p>
-                <input type = "submit" name = "btn-submit" value = "Submit form" id = "btn-submit">
+                <input type = "submit" name = "btn-submit" value = "Submit form">
             </p>
         </form>
-       
 
 
     <!-- including the jquery library from the jquery website -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src = "javascript/CWorkOrder.js"></script>
+    <script src = "javascript/WorkOrder.js"></script>
     </body>
 </html>
 
