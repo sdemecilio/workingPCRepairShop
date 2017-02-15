@@ -24,9 +24,9 @@
 <nav id="nav">
     <ul>
         <li><a href="index.php">Our Story</a></li>
-        <li><a href = "shopRequirements.php">Shop requirements</a></li>
+        <li><a href = "#">Shop requirements</a></li>
         <li><a href="#first">Forms</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li><a href="#second">Contact</a></li>
         <li><a href="admin/adminLogin.php">Admin Login</a></li>
     </ul>
 </nav>
