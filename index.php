@@ -48,9 +48,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 										<header class="major">
 											<h2>Our Story</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>The Green River PC Repair shop opened January 6, 2011 by Spunky. The PC Repair shop is completely student ran but is under faculty supervision. The students that work in the shop use the time they are there for some hands on, real world experience while also still getting an education. Some of the students may also volunteer their time to the shop.</p>
 	
 									</div>
 									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
