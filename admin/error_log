@@ -1,3 +1,4 @@
 [14-Feb-2017 11:28:47 America/Chicago] PHP Warning:  include(../adminMenu.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/admin/adminLogin.php on line 38
 [14-Feb-2017 11:28:47 America/Chicago] PHP Warning:  include(../adminMenu.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/admin/adminLogin.php on line 38
 [14-Feb-2017 11:28:47 America/Chicago] PHP Warning:  include(): Failed opening '../adminMenu.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/admin/adminLogin.php on line 38
+[16-Feb-2017 14:08:38 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home/pcrepair/public_html/working/admin/adminSelect.php on line 97
