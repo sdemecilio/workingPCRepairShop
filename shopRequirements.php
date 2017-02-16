@@ -56,6 +56,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel = "stylesheet" href = "css/background.css">
 </head>
 <body>
 
@@ -122,7 +123,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             We do have paperwork that has to be completed before we can start diagnosis of equipment.<p>
 
                 </div>
-                <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+
             </div>
         </section>
 
