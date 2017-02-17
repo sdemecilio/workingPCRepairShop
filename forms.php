@@ -2,9 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: Axum
- * Date: 2/15/2017
- * Time: 11:51 AM
+ * Date: 2/17/2017
+ * Time: 11:09 AM
  */
+
+
 
 
 /**
@@ -31,7 +33,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
  */
 
+
+
+
+
 ?>
+
 
 <?php
 /**
@@ -45,7 +52,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-*/
+ */
 ?>
 <html>
 <head>
@@ -56,7 +63,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <link rel = "stylesheet" href = "css/background.css">
 </head>
 <body>
 
@@ -82,46 +88,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <div class="spotlight">
                 <div class="content">
                     <header class="major">
-                        <h2>Shop Requirements</h2>
+                        <h2>Forms</h2>
                     </header>
-                        <p><b>Cost:</b><br>
-
-                            We do not charge per hour for services. However, there is a <b><u>suggested donation</u></b> of <b><u>$50.00</u></b> that goes towards diagnosis/repair of your equipment and the cost to run the shop.</p>
-
-                        <p><b>Repair:</b><br>
-
-                            We will with in our power, diagnosis a problem and make suggestions and recommendations as needed if applicable.</p>
-
-                        <p><b>Software Upgrades:</b><br>
-
-                            While your equipment is with us and authorized we can update certain software.</p>
-
-
-
-                        <p><b>Hardware/Software:</b><br>
-
-                            We can install hardware and/or software. It does have to be purchased and brought into the shop, we do not order parts or software.</p>
-
-
-                        <p><b>Support Devices:</b><br>
-
-                            We will work on almost all laptops as long as they are in English. No tablets, cell phones, flash drives, or ay Apple product. </p>
-
-
-                        <p><b>Find and Delete Viruses:</b><br>
-
-                            We will scan a device and if we do discover something, we will remove if possible, or provide options.</p>
-
-
-                        <p><b>Upgrade Your Hardware:</b><br>
-
-                            If you have compatible hardware, we can install it for you, or make suggestions if requested.</p>
-
-
-                        <p><b>For Any Work Done (including general questions):</b><br>
-
-                            We do have paperwork that has to be completed before we can start diagnosis of equipment.<p>
-
+                        <form action="">
+                            <p>Is your computer under warranty?</p>
+                            <input type="radio" name="warranty" value="yes" id = "YesWarranty"> Yes<br>
+                            <input type="radio" name="warranty" value="no" id = "no"> No<br>
+                        </form>
+                        <p id = "errorMessage" class = "requiredFields">We cannot work on your computer. Please see a tech for questions.</p>
+                        <button> <a href = "GRworkOrderForm.php">Green River Community</a></button>&nbsp;&nbsp;<button>Public</button>
                 </div>
 
             </div>
@@ -136,6 +111,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     </footer>
 
 </div>
+
+<!-- including the jquery library from the jquery website -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src = "javascript/RepairShop.js"></script>
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
