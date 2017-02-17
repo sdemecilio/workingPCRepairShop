@@ -44,3 +44,8 @@ Stack trace:
   thrown in /home/pcrepair/public_html/working/workCon.php on line 48
 [07-Feb-2017 18:19:31 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/pcrepair/public_html/working/workCon.php:10) in /home/pcrepair/public_html/working/workCon.php on line 51
 [07-Feb-2017 22:44:00 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/workCon.php on line 47
+[13-Feb-2017 13:33:14 America/Chicago] PHP Warning:  include(indexMenu.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/index2.php on line 15
+[13-Feb-2017 13:33:14 America/Chicago] PHP Warning:  include(indexMenu.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/index2.php on line 15
+[13-Feb-2017 13:33:14 America/Chicago] PHP Warning:  include(): Failed opening 'indexMenu.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/index2.php on line 15
+[15-Feb-2017 15:03:23 America/Chicago] PHP Parse error:  syntax error, unexpected 'include' (T_INCLUDE) in /home/pcrepair/public_html/working/contact.php on line 1
+[15-Feb-2017 15:06:04 America/Chicago] PHP Parse error:  syntax error, unexpected 'include' (T_INCLUDE) in /home/pcrepair/public_html/working/contact.php on line 1

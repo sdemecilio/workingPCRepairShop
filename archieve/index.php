@@ -11,10 +11,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  */
+
+ include ('menu.php');
 ?>
 <html>
 <head>
-    <title>GR Repair Sop</title>
+    <title>GR Repair Shop</title>
 <!-- CSS libraries -->
 <link rel = "stylesheet" href = "css/RepairShop.css">
 <!--<link rel = "stylesheet" href = "css/home.css">-->
@@ -29,12 +31,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <p>Is your computer under warranty?</p>
   <input type="radio" name="warranty" value="yes" id = "YesWarranty"> Yes<br>
   <input type="radio" name="warranty" value="no" id = "no"> No<br>
+  
+  <p id = "followUp">Is your warranty a software warranty or hardware warranty?</p>
+  <p id = "options">
+    <input type = "radio" name = "followUpAnswer" value = "Software" id = "Software"> Software<br>
+    <input type = "radio" name = "followUpAnswer" value = "Hardware" id = "Hardware"> Hardware
+  </p>
 </form>
 
 <p id = "errorMessage" class = "requiredFields">We cannot work on your computer. Please see a tech for questions.</p>
-<button> <a href = "GRworkOrderForm.php">Green River Community</a></button>&nbsp;&nbsp;<button>Public</button>
-
-<footer>Contact"<a href ="mailto:arobinson@greenriver.edu">arobinson@greenriver.edu</a>"</footer>
+<button> <a href = "policy.php">Procced to paperwork</a></button>
 
 
 <!-- including the jquery library from the jquery website -->
