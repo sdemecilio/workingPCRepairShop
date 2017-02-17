@@ -1,9 +1,10 @@
 <?php
-$servername="localhost";
-$username= "pcrepair";
-$password ="Capstone2017!";
-$dbname="pcrepair_shop";
+//$servername="localhost";
+//$username= "pcrepair";
+//$password ="Capstone2017!";
+//$dbname="pcrepair_shop";
 
+require('../../databaseConnect.php');
 
  
  
@@ -25,7 +26,7 @@ $dbname="pcrepair_shop";
    
      
      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-       echo "Your papers were successfully submitted! <br>";
+       echo "<h2>Your papers were successfully submitted!</h2>";
 	  //echo"<table>";
 	  //echo "<tr";
 	  //echo"<th>ORDER</th>";
