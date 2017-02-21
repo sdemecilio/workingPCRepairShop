@@ -109,7 +109,7 @@ include 'workCon.php';
          ////   //check errors
           if($valid){
          //     //redirect to work order form
-           header("Location: success.php");
+          header("Location: success.php");
           exit();
          }
    }
