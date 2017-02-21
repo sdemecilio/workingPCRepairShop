@@ -1,27 +1,32 @@
 $('#YesWarranty').click(function() {
-    $('button').hide();
+    $('#proceedToPaperwork').hide();
     $('#followUp').show();
     $('#options').show();
 });
 
 $('#no').click(function() {
-    $('button').show();
+    $('#proceedToPaperwork').show();
     $('#errorMessage').hide();
     $('#followUp').hide();
     $('#options').hide();
 });
 
-$('#Software').click(function() {
+$('#Hardware').click(function() {
     $('#errorMessage').show();
-    $('button').hide();
+    $('#proceedToPaperwork').hide();
 });
 
-$('#Hardware').click(function() {
-    $('button').show();
+$('#Software').click(function() {
+    $('#proceedToPaperwork').show();
+    $('#errorMessage').hide();
+});
+
+$('#Unsure').click(function() {
+    $('#proceedToPaperwork').show();
     $('#errorMessage').hide();
 });
 
 $('#errorMessage').hide();
-$('button').hide();
+$('#proceedToPaperwork').hide();
 $('#followUp').hide();
 $('#options').hide();
