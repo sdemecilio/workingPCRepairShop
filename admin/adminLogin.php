@@ -55,7 +55,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 										<header class="major">
 											<h2>Green River Tech Shop Login</h2>
 										</header>
-										<form>
+										<form action = "adminSelect.php">
                       <input type = "email" id = "inputEmail" class = "form-control" placeholder = "Email address" required autofocus>
                       <br>
                       <input type = "password" id = "inputPassword" class = "form-control" placeholder = "Password" required autofocus>

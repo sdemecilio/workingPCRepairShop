@@ -45,6 +45,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<link rel = "stylesheet" href = "https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
 		<link rel = "stylesheet" href = "admin.css">
+		<link rel = "stylesheet" href = "../css/background.css">
 	</head>
 	
 	<body>
