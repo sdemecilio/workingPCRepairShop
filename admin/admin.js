@@ -1,3 +1,7 @@
+//$(document).ready(function() {
+//    $('table.display').DataTable();
+//} );
+
 $(document).ready(function() {
-    $('table.display').DataTable();
+    $('#example').DataTable();
 } );

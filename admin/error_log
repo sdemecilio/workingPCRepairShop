@@ -2,3 +2,29 @@
 [14-Feb-2017 11:28:47 America/Chicago] PHP Warning:  include(../adminMenu.php): failed to open stream: No such file or directory in /home/pcrepair/public_html/working/admin/adminLogin.php on line 38
 [14-Feb-2017 11:28:47 America/Chicago] PHP Warning:  include(): Failed opening '../adminMenu.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/pcrepair/public_html/working/admin/adminLogin.php on line 38
 [16-Feb-2017 14:08:38 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home/pcrepair/public_html/working/admin/adminSelect.php on line 97
+[02-Mar-2017 12:27:31 America/Chicago] PHP Parse error:  syntax error, unexpected 'each' (T_STRING), expecting '(' in /home/pcrepair/public_html/working/admin/adminSelect.php on line 84
+[02-Mar-2017 12:37:45 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/pcrepair/public_html/working/admin/adminSelect.php on line 95
+[02-Mar-2017 13:18:13 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/adminSelect.php on line 96
+[02-Mar-2017 13:29:53 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/adminSelect.php on line 96
+[02-Mar-2017 13:29:55 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/adminSelect.php on line 96
+[02-Mar-2017 13:30:47 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/adminSelect.php on line 96
+[02-Mar-2017 13:36:45 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/adminSelect.php on line 96
+[06-Mar-2017 03:11:01 America/Chicago] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 17
+[06-Mar-2017 03:11:26 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/pcrepair/public_html/working/admin/editWorkOrder.php:17
+Stack trace:
+#0 /home/pcrepair/public_html/working/admin/editWorkOrder.php(17): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 17
+[06-Mar-2017 03:15:15 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 39
+[06-Mar-2017 12:23:21 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 106
+[06-Mar-2017 13:49:48 America/Chicago] PHP Fatal error:  Call to a member function query() on a non-object in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 39
+[06-Mar-2017 13:53:53 America/Chicago] PHP Fatal error:  Call to a member function query() on a non-object in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 39
+[06-Mar-2017 13:59:14 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 101
+[06-Mar-2017 14:05:56 America/Chicago] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 116
+[06-Mar-2017 14:18:19 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 89
+[06-Mar-2017 14:19:29 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 39
+[06-Mar-2017 14:37:03 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 39
+[06-Mar-2017 14:49:24 America/Chicago] PHP Parse error:  syntax error, unexpected '"<br>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 90
+[06-Mar-2017 14:50:12 America/Chicago] PHP Catchable fatal error:  Object of class PDOStatement could not be converted to string in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 89
+[06-Mar-2017 14:50:34 America/Chicago] PHP Catchable fatal error:  Object of class PDOStatement could not be converted to string in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 89
+[06-Mar-2017 14:58:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/admin/editWorkOrder.php on line 76

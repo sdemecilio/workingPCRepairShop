@@ -32,6 +32,7 @@
 	 catch(PDOException $e) {
 	 echo "Error: " . $e->getMessage();	
 	}
+	
 
 ?>
 <html>
@@ -69,35 +70,34 @@
 
 						<!-- Introduction -->
 							<section id="intro" class="main">
-								<div class="content">
-									<?php
-										echo "<table id = 'display_table' class = 'display'>";
-										echo "<thead>";
-											echo "<tr>";
-												echo "<th>Order number</th>";
-												echo "<th>First Name</th>";
-												echo "<th>Last Name</th>";
-												echo "<th>Green River ID</th>";
-												echo "<th>Date</th>";
-												//echo "<th colspan = 2>Options</th>";
-											echo "</tr>";
-										echo "</thead>";
-										
-											foreach($result as $row)
+								<div class="content">				
+									<table id="example" class="display" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>OrderNumber</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Green River ID</th>
+												<th>Date</th>
+												<th>View Work Order</th>
+												<th>Edit Work Order</th>
+											</tr>
+										</thead>
+										<?php
+											foreach ($result as $row)
 											{
 												echo "<tr>";
 													echo "<td>" . $row['workOrderID'] . "</td>";
 													echo "<td>" . $row['first_name'] . "</td>";
 													echo "<td>" . $row['last_name'] . "</td>";
-													echo "<td>" . $row['greenriverID']. "</td>";
+													echo "<td>" . $row['greenRiverID'] . "</td>";
 													echo "<td>" . $row['timestamp'] . "</td>";
-													//echo "<td><a href = '#'>View</td>";
-													//echo "<td><a href = '#'>Edit Office Use</td>";
+													echo "<td align = 'center'><a href = '#'>View</a></td>";
+													echo "<td align = 'center'><a href = 'editWorkOrder.php?workOrderID=" . $row['workOrderID'] . "'>Edit</a></td>";
 												echo "</tr>";
 											}
-											
-										echo "</table>";
-									?>
+										?>
+									</table>
 								</div>
 							</section>
 
