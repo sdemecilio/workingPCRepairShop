@@ -13,24 +13,12 @@
 	 */
 	
 	require('../../../databaseConnect.php');
+	include('editConn.php');
 	
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	 //echo 'Connected to database';
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	$id = $_GET['workOrderID'];
-	$student_faculty = $_GET['student_faculty'];
-	$first_name = $_GET['first_name'];
-	$last_name = $_GET['last_name'];
-	$greenriverID = $_GET['greenriverID'];
-	$email = $_GET['email'];
-	$phone_number = $_GET['phone_number'];
-	$computer_language = $_GET['computer_language'];
-	$computer_username = $_GET['computer_username'];
-	$computer_password = $_GET['computer_password'];
-	$ccleaner = $_GET['ccleaner'];
-	$customer_initials = $_GET['customer_initials'];
-	$issues = $_GET['issues'];
 	
 	try
 	{
@@ -84,23 +72,22 @@
 
 						<!-- Introduction -->
 							<section id="intro" class="main">
-								<div class="content">				
+								<div class="content">
 									<?php								
-										
+										echo "<h3><a href = 'adminSelect.php'><< Back</a></h3>";
 										foreach ($result as $row)
 										{
-											echo "Work ID: " . $row['workOrderID'] . "<br>";
-										echo "First Name: " . $row['first_name'] . "<br>";
-										echo "Last Name: " . $row['last_name'] . "<br>";
-										echo "Green River ID" . $row['greenRiverID']  . "<br>";
-										echo "Email: " . $row['email'] . "<br>";
-										echo "Phone Number: " . $row['phone_number'] . "<br>";
-										echo "English Computer Langugage: " . $row['computer_language'] . "<br>";
-										echo "Computer Username: " . $row['computer_username'] . "<br>";
-										echo "Computer Password: " . $row['computer_password'] . "<br>";
-										echo "Ccleaner Removal: " . $row['ccleaner'] . "<br>";
-										echo "Customer Initials: " . $row['customer_initials'] . "<br>";
-										echo "Computer Issues: " . $row['issues'] . "<br>";
+											echo "First Name: " . $row['first_name'] . "<br>";
+											echo "Last Name: " . $row['last_name'] . "<br>";
+											echo "Green River ID" . $row['greenRiverID']  . "<br>";
+											echo "Email: " . $row['email'] . "<br>";
+											echo "Phone Number: " . $row['phone_number'] . "<br>";
+											echo "English Computer Langugage: " . $row['computer_language'] . "<br>";
+											echo "Computer Username: " . $row['computer_username'] . "<br>";
+											echo "Computer Password: " . $row['computer_password'] . "<br>";
+											echo "Ccleaner Removal: " . $row['ccleaner'] . "<br>";
+											echo "Customer Initials: " . $row['customer_initials'] . "<br>";
+											echo "Computer Issues: " . $row['issues'] . "<br>";
 										}
 										
 										echo "<hr>";
@@ -108,21 +95,30 @@
 									?>
 					
 									<form id = "office_use" method = "post" action = "">
-										Date Recieved: <input type = "date" id = "date_recieve" name = "date_recieve"><br>
-										Receipt Number: <input type = "text" id = "receipt_number" name = "receipt_number"><br>
-										Receiving Technician: <input type = "text" id = "receiving_tech" name = "receiving_tech"><br>
-										Manufacturer: <input type = "text" id = "manufacturer" name = "manufacturer"><br>
-										Operating System: <input type = "text" id = "op_system" name = "op_system"><br>
-										PC S/N: <input type = "text" id = "pc_sn" name = "pc_sn"><br>
-										Model: <input type = "text" id = "model" name = "model"><br>
-										OS Key: <input type = "text" id = "os_key" name = "os_key"><br>
-										Ledger (Initialed) dropped off: <input type = "text" id = "ledger" name = "ledger"><br>
+										Date Recieved: <input type = "date" id = "date_recieve" name = "date_recieve">
+										<div class = "error"><?php if (isset($_POST['date_recieve'])) {echo $errors['date_recieve'];} ?></div>
+										Receipt Number: <input type = "text" id = "receipt_number" name = "receipt_number">
+										<div class = "error"><?php if (isset($_POST['receipt_number'])) {echo $errors['receipt_number'];} ?></div>
+										Receiving Technician: <input type = "text" id = "receiving_tech" name = "receiving_tech">
+										<div class = "error"><?php if (isset($_POST['receiving_tech'])) {echo $errors['receiving_tech'];} ?></div>
+										Manufacturer: <input type = "text" id = "manufacturer" name = "manufacturer">
+										<div class = "error"><?php if (isset($_POST['manufacturer'])) { echo $errors['manufacturer'];} ?></div>
+										Operating System: <input type = "text" id = "op_system" name = "op_system">
+										<div class = "error"><?php if (isset($_POST['op_system'])) { echo $errors['op_system'];} ?></div>
+										PC S/N: <input type = "text" id = "pc_sn" name = "pc_sn">
+										<div class = "error"><?php if (isset($_POST['op_system'])) { echo $errors['op_system'];} ?></div>
+										Model: <input type = "text" id = "model" name = "model">
+										<div class = "error"><?php if (isset($_POST['model'])) { echo $errors['model'];} ?></div>
+										OS Key: <input type = "text" id = "os_key" name = "os_key">
+										<div class = "error"><?php if (isset($_POST['os_key'])) { echo $errors['os_key'];} ?></div>
+										Ledger (Initialed) dropped off: <input type = "text" id = "ledger" name = "ledger"
+										<div class = "error"><?php if (isset($_POST['ledger'])) { echo $errors['ledger'];} ?></div>
 										Ledger (Initialed) picked up: <input type = "text" id = "ledger_pickup" name = "ledger_pickup"><br>
 										Date Work Began: <input type = "date" id = "work_began" name = "work_began">
-										Date Work Finished: <input type = "date" id = "work_finished" name = "work_finished"><br>
+										Date Work Finished: <input type = "date" id = "work_finished" name = "work_finished"><br><br>
 										
 										<p>
-											<input type = "submit" id = "submit-btn" name = "submit-btn" value = "Update Record">
+											<input type = "submit" id = "submit" name = "submit" value = "Submit">
 										</p>
 									</form>
 								</div>
