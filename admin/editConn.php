@@ -117,7 +117,7 @@
             }
         }
         
-    }
+    
     
     if ($valid)
     {
@@ -161,13 +161,16 @@
             $statement->bindParam(':work_finished', $work_finished);
             
             // execute
-            $statement->execute();        
+            $statement->execute();
+            
+            echo "Input has been successful!";
         }
         
         catch (PDOException $e)
         {
             echo "Error: " . $e->getMessage();
         }
+    }
     }
 
 ?>
