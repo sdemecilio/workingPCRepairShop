@@ -15,17 +15,15 @@
 	require('../../../databaseConnect.php');
 	
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	 //echo 'Connected to database';
+
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	try
 	{
-	
 		//Selecting data 
 		$stmt = $conn->query("SELECT * FROM workOrder");
 	  
-		$stmt->setFetchMode(PDO::FETCH_OBJ); 
-	  //$stmt->execute();
+		$stmt->setFetchMode(PDO::FETCH_OBJ);
 		 
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -55,8 +53,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="../images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
-						<h1>Green River PC Repair Shop</h1>
+
 					</header>
 
 				<!-- Nav -->
@@ -79,7 +76,6 @@
 												echo "<th>Last Name</th>";
 												echo "<th>Green River ID</th>";
 												echo "<th>Date</th>";
-												//echo "<th colspan = 2>Options</th>";
 											echo "</tr>";
 										echo "</thead>";
 										
@@ -91,8 +87,6 @@
 													echo "<td>" . $row['last_name'] . "</td>";
 													echo "<td>" . $row['greenriverID']. "</td>";
 													echo "<td>" . $row['timestamp'] . "</td>";
-													//echo "<td><a href = '#'>View</td>";
-													//echo "<td><a href = '#'>Edit Office Use</td>";
 												echo "</tr>";
 											}
 											
@@ -102,12 +96,6 @@
 							</section>
 
 					</div>
-
-				<!-- Footer -->
-<!--					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>-->
-
 		</div>
 
 		<!-- Scripts -->

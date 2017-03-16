@@ -40,11 +40,11 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
+				<!--<!-- Header -->
+					<!--<header id="header" class="alt">
 						<span class="logo"><img src="images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
 						<h1>Green River PC Repair Shop</h1>
-					</header>
+					</header>-->-->
 
 				<!-- Nav -->
 				<?php
