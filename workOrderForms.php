@@ -14,22 +14,7 @@ include 'workCon.php';
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <link rel = "stylesheet" href = "css/background.css">
-    <style>
-        input[type="checkbox"],
-        input[type="radio"] {
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            -ms-appearance: none;
-            appearance: none;
-            display: block;
-            float: left;
-            margin-right: -2em;
-            opacity: 0;
-            width: 1em;
-            z-index: -1;
-        }
-    </style>
-
+    
 </head>
 
 <body>
