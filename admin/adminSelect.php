@@ -15,21 +15,24 @@
 	require('../../../databaseConnect.php');
 	
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
+	 //echo 'Connected to database';
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	try
 	{
+	
 		//Selecting data 
 		$stmt = $conn->query("SELECT * FROM workOrder");
 	  
-		$stmt->setFetchMode(PDO::FETCH_OBJ);
+		$stmt->setFetchMode(PDO::FETCH_OBJ); 
+	  //$stmt->execute();
 		 
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 	 catch(PDOException $e) {
 	 echo "Error: " . $e->getMessage();	
 	}
+	
 
 ?>
 <html>
@@ -53,7 +56,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-
+						<h1>Green River PC Repair Shop</h1>
 					</header>
 
 				<!-- Nav -->
@@ -66,36 +69,44 @@
 
 						<!-- Introduction -->
 							<section id="intro" class="main">
-								<div class="content">
-									<?php
-										echo "<table id = 'display_table' class = 'display'>";
-										echo "<thead>";
-											echo "<tr>";
-												echo "<th>Order number</th>";
-												echo "<th>First Name</th>";
-												echo "<th>Last Name</th>";
-												echo "<th>Green River ID</th>";
-												echo "<th>Date</th>";
-											echo "</tr>";
-										echo "</thead>";
-										
-											foreach($result as $row)
+								<div class="content">				
+									<table id="example" class="display" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>OrderNumber</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Green River ID</th>
+												<th>Date</th>
+												<th>View Work Order</th>
+												<th>Edit Work Order</th>
+											</tr>
+										</thead>
+										<?php
+											foreach ($result as $row)
 											{
 												echo "<tr>";
 													echo "<td>" . $row['workOrderID'] . "</td>";
 													echo "<td>" . $row['first_name'] . "</td>";
 													echo "<td>" . $row['last_name'] . "</td>";
-													echo "<td>" . $row['greenriverID']. "</td>";
+													echo "<td>" . $row['greenRiverID'] . "</td>";
 													echo "<td>" . $row['timestamp'] . "</td>";
+													echo "<td align = 'center'><a href = '#'>View</a></td>";
+													echo "<td align = 'center'><a href = 'editWorkOrder.php?workOrderID=" . $row['workOrderID'] . "'>Edit</a></td>";
 												echo "</tr>";
 											}
-											
-										echo "</table>";
-									?>
+										?>
+									</table>
 								</div>
 							</section>
 
 					</div>
+
+				<!-- Footer -->
+<!--					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>-->
+
 		</div>
 
 		<!-- Scripts -->
@@ -111,7 +122,5 @@
 			<script src = "admin.js"></script>
 </body>
 </html>
-
-
 
 
