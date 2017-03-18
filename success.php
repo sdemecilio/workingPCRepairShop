@@ -16,6 +16,7 @@
 	
 	 */
 	require('../../databaseConnect.php');
+	//include('pdfGenerate/pdfGenerate.php');
 
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 	//echo 'Connected to database';
@@ -40,11 +41,10 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!--<!-- Header -->
-					<!--<header id="header" class="alt">
-						<span class="logo"><img src="images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
+				<!-- Header -->
+					<header id="header" class="alt">
 						<h1>Green River PC Repair Shop</h1>
-					</header>-->-->
+					</header>
 
 				<!-- Nav -->
 				<?php
@@ -62,22 +62,29 @@
 											<h2>Submission accepted!</h2>
 										</header>
 										<p>Your submission was accepted. Please review the information to verify that it is correct. </p>
+										
+<!--										<form action = "pdfGenerate/pdfGenerate.php?workOrderID=" target = "_blank">
+											<button type = "submit" value = "Print Work Order">
+										</form>-->
+										
 										<?php											
 											try{
-   
 												//Selecting data 
-												$stmt = $conn->query("SELECT * FROM workOrder ORDER BY `timestamp` DESC LIMIT 1");
+												$stmt = $conn->query("SELECT * FROM workOrder ORDER BY `workOrderID` DESC LIMIT 1");
 											      
 												$stmt->setFetchMode(PDO::FETCH_OBJ);									      
 												 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 												     												 
 												 //printing out the results
 												 foreach($result as $row){
-												    
+													echo "<h3>";
+													echo "<a href = 'pdfGenerate/pdfGenerate.php?workOrderID=" . $row['workOrderID'] . "' target = '_blank'>Print Work Order</a>";
+													echo "</h3>";
+													
 													 echo "<p>";
 													 echo "<b>First Name: </b>" . $row['first_name'] . "<br>";
 													 echo "<b>Last Name: </b>" . $row['last_name'] . "<br>";
-													 echo "<b>Green River ID: </b>" . $row['greenRiverID'] . "<br>";
+													 echo "<b>Green River ID: </b>" . $row['greenriverID'] . "<br>";
 													 echo "<b>Email: </b>".$row['email'] . "<br>";
 													 echo "<b>Phone number: </b>" .$row['phone_number'] . " <br>";
 													 echo "<b>Computer Language, English: </b>" . $row['computer_language'] . "<br>";
@@ -87,7 +94,8 @@
 													 echo "<b>Customer Initials: </b>" . $row['customer_initials'] . "<br>";
 													 echo "<b>Issues: </b>" . $row['issues'] . "<br>";
 													 echo "<a href = 'index.php'>Return to Tech Shop Website</a> <br>";
-													 echo "<a href = 'https://www.greenriver.edu'>Go to Green River College Website</a>";										 
+													 echo "<a href = 'https://www.greenriver.edu'>Go to Green River College Website</a>";
+													 
 												    }
 												    
 												    echo "</p>";
