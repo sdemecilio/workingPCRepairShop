@@ -24,7 +24,7 @@ class Tech {
         //prepare the statement
         $stmt = $this->db->prepare($query);
         $stmt->execute();
-        $rows = $stmt->fetchAll();
+        $rows = $stmt->retchAll();
         $result = array();
         foreach($rows as $row) {
             array_push($result, $this->read($row));

@@ -15,16 +15,18 @@
 	require('../../../databaseConnect.php');
 	
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
+	 //echo 'Connected to database';
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	try
 	{
+	
 		//Selecting data 
 		$stmt = $conn->query("SELECT * FROM workOrder");
 	  
 		$stmt->setFetchMode(PDO::FETCH_OBJ); 
-
+	  //$stmt->execute();
+		 
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 	 catch(PDOException $e) {
@@ -54,12 +56,13 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
+						<span class="logo"><img src="../images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
 						<h1>Green River PC Repair Shop</h1>
 					</header>
 
 				<!-- Nav -->
 					<?php
-						include ('adminMenu.php');
+						include ('adminMenu2.php');
 					?>
 
 				<!-- Main -->
@@ -101,9 +104,9 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
+<!--					<footer id="footer">
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					</footer>-->
 
 		</div>
 

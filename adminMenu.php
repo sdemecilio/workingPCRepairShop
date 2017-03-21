@@ -20,14 +20,14 @@
 <html>
 
 <body>
-<!--Creating nav bar -->
+
 <nav id="nav">
     <ul>
-        <li><a href="index.php">Our Story</a></li>
-        <li><a href = "shopRequirements.php">Shop Requirements</a></li>
-        <li><a href="forms.php">Forms</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="admin/login.php">Admin/Tech Login</a></li>
+        <li><a href="../index.php">Our Story</a></li>
+        <li><a href = "../shopRequirements.php">Shop Requirements</a></li>
+        <li><a href="../forms.php">Forms</a></li>
+        <li><a href="../contact.php">Contact</a></li>
+        <li><a href="adminLogin.php">Admin Login</a></li>
     </ul>
 </nav>
      

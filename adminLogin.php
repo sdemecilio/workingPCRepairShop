@@ -36,12 +36,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 				<!-- Header -->
 					<header id="header" class="alt">
-
+						<span class="logo"><img src="../images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
+						<h1>Green River PC Repair Shop</h1>
 					</header>
 
 				<!-- Nav -->
 				<?php
-					//include ('adminMenu.php');
+					include ('adminMenu.php');
 					?>
 
 				<!-- Main -->
@@ -55,14 +56,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 											<h2>Green River Tech Shop Login</h2>
 										</header>
 										<form action = "adminSelect.php">
-											<input type = "email" id = "inputEmail" class = "form-control" placeholder = "Email address" required autofocus>
-											<br>
-											<input type = "password" id = "inputPassword" class = "form-control" placeholder = "Password" required autofocus>
-											<br>
-											<div class = "checkbox">
-												<button class = "btn btn-lg btn primary btn-block" type = "submit">Sign in</button>
-										</form>
+                      <input type = "email" id = "inputEmail" class = "form-control" placeholder = "Email address" required autofocus>
+                      <br>
+                      <input type = "password" id = "inputPassword" class = "form-control" placeholder = "Password" required autofocus>
+                      <br>
+                      <div class = "checkbox">
+                        <button class = "btn btn-lg btn primary btn-block" type = "submit">Sign in</button>
+                      </form>
 							</section>
+
 					</div>
 
 				<!-- Footer -->
@@ -84,5 +86,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	</body>
 </html>
-
-

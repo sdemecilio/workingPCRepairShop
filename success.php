@@ -16,10 +16,10 @@
 	
 	 */
 	require('../../databaseConnect.php');
-	//include('pdfGenerate/pdfGenerate.php');
+
 
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	//echo 'Connected to database';
+
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 ?>
@@ -62,18 +62,14 @@
 											<h2>Submission accepted!</h2>
 										</header>
 										<p>Your submission was accepted. Please review the information to verify that it is correct. </p>
-										
-<!--										<form action = "pdfGenerate/pdfGenerate.php?workOrderID=" target = "_blank">
-											<button type = "submit" value = "Print Work Order">
-										</form>-->
-										
+
 										<?php											
 											try{
 												//Selecting data 
 												$stmt = $conn->query("SELECT * FROM workOrder ORDER BY `workOrderID` DESC LIMIT 1");
 											      
 												$stmt->setFetchMode(PDO::FETCH_OBJ);									      
-												 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+												$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 												     												 
 												 //printing out the results
 												 foreach($result as $row){
@@ -95,25 +91,20 @@
 													 echo "<b>Issues: </b>" . $row['issues'] . "<br>";
 													 echo "<a href = 'index.php'>Return to Tech Shop Website</a> <br>";
 													 echo "<a href = 'https://www.greenriver.edu'>Go to Green River College Website</a>";
-													 
 												    }
-												    
 												    echo "</p>";
 												}
 												catch(PDOException $e) {
 													echo "Error: " . $e->getMessage();
 												}
 										?>
-	
 									</div>
 								</div>
 							</section>
-
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						</section>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 

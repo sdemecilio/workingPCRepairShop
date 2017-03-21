@@ -65,7 +65,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     <!-- Header -->
     <header id="header" class="alt">
-        <span class="logo"><img src="images/grcRepairLogo.jpg" alt="Repair Shop Logo" /></span>
         <h1>Green River PC Repair Shop</h1>
     </header>
 

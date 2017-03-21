@@ -11,18 +11,23 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  */
+
+  /*
+  *	File name: adminLogin.php
+  *	File description: Admin/ tech shop employee login page.
+  */
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Green River Repair Shop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel = "stylesheet" href = "css/background.css">
-
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+		<link rel = "stylesheet" href = "../css/background.css">
 	</head>
 	<body>
 
@@ -31,13 +36,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/GRimage.JPG" alt="Repair Shop Logo" /></span>
-						<h1>Green River PC Repair Shop</h1>
+						
 					</header>
 
 				<!-- Nav -->
 				<?php
-					include ('indexMenu.php');
+					//include ('adminMenu.php');
 					?>
 
 				<!-- Main -->
@@ -48,15 +52,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Our Story</h2>
+											<h2>Green River Tech Shop Login</h2>
 										</header>
-										<p>The Green River PC Repair shop opened January 6, 2011 by Spunky. The PC Repair shop is completely student ran but is under faculty supervision. The students that work in the shop use the time they are there for some hands on, real world experience while also still getting an education. Some of the students may also volunteer their time to the shop.</p>
-	
-									</div>
-									<span class="image"><img src="images/placeHolderImage.JPG" alt="" /></span>
-								</div>
+										<form action = "adminSelect.php">
+											<input type = "email" id = "inputEmail" class = "form-control" placeholder = "Email address" required autofocus>
+											<br>
+											<input type = "password" id = "inputPassword" class = "form-control" placeholder = "Password" required autofocus>
+											<br>
+											<div class = "checkbox">
+												<button class = "btn btn-lg btn primary btn-block" type = "submit">Sign in</button>
+										</form>
 							</section>
-
 					</div>
 
 				<!-- Footer -->
@@ -68,13 +74,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
+
+
