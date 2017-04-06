@@ -6,7 +6,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $errors = array();
     $issues="";
     $valid=true;
-
     //start validation
     //validate first name
     if(empty($_POST['first_name'])){
@@ -19,7 +18,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $valid=false;
         }
     }
-
     //validate last name
     if(empty($_POST['last_name'])){
         $errors['last_nameErr'] = "Your Last name cannot be empty";
@@ -43,7 +41,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $valid=false;
         }
     }
-
     //validate grc id
     if(empty($_POST['greenriverID'])){
 
@@ -55,8 +52,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $errors['greenriverIDErr']="Invalid GRC ID, numbers only";
             $valid=false;
         }
-    }
 
+    }
     //validate phone number
     if(empty($_POST['phone_number'])){
 
@@ -68,28 +65,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $valid=false;
         }
     }
-
     //validate username
     if(empty($_POST['computer_username'])){
 
         $errors['computer_usernameErr'] = "Your username cannot be empty";
         $valid=false;
     }
-
     //validate customer password
     if(empty($_POST['computer_password'])){
 
         $errors['computer_passwordErr'] = "Your password cannot be empty";
         $valid=false;
     }
-
     //validate customer initials
     if(empty($_POST['customer_initials'])){
 
         $errors['customer_initialsErr']="Please enter your initials";
         $valid=false;
     }
-
     //validate computer language radio button
     if(empty($_POST['computer_language'])){
 
@@ -127,18 +120,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         }
     }
-
+    //print_r($_POST);
     //if its valid connect to database
     if($valid){
+
+
 
         $servername="localhost";
         $username= "pcrepair";
         $password ="Capstone2017!";
         $dbname="pcrepair_shop";
 
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
+
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        //echo 'Connected to database';
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+
+        //if(isset($_POST['submit'])){
 
         $for_issues="";
 
@@ -156,15 +157,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $customer_initials=$_POST['customer_initials'];
         $issues= $_POST['issues'];
 
+
         if(!empty($_POST['issues'])){
 
             $for_issues = "No issues selected";
 
             $for_issues=implode(" , ", $issues);
 
+
             //inserting data
-            $stmt=$conn->prepare("INSERT into workOrder (student_faculty,first_name,last_name,greenriverID,email,phone_number,computer_language,computer_username,computer_password,ccleaner,customer_initials,issues) values(:student_faculty,:first_name,:last_name,:greenriverID,:email, :phone_number, :computer_language, :computer_username, :computer_password, :ccleaner, :customer_initials, :issues)");
-	
+
+            $stmt=$conn->prepare("INSERT into workOrder (student_faculty,first_name,last_name,greenriverID,email,phone_number,computer_language,computer_username,computer_password,ccleaner,customer_initials,issues) values(:student_faculty,:first_name,:last_name,:greenriverID,:email,:phone_number,:computer_language,:computer_username,:computer_password,:ccleaner,:customer_initials,:issues)");
+
+
             //Bind Values
             $stmt->bindParam(':student_faculty',$student_faculty);
             $stmt->bindParam(':first_name',$first_name);
@@ -178,10 +183,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $stmt->bindParam(':ccleaner',$ccleaner);
             $stmt->bindParam(':customer_initials',$customer_initials);
             $stmt->bindParam(':issues',$for_issues);
-
             //Execute
-            $stmt->execute();
 
+
+            $stmt->execute();
+            //echo 'data added';
             //redirect to work order
             header("location: success.php");
             exit;
