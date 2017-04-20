@@ -17,6 +17,7 @@
 	 */
 	require('../../databaseConnect.php');
 
+	session_start();
 
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
@@ -66,7 +67,7 @@
 										<?php											
 											try{
 												//Selecting data 
-												$stmt = $conn->query("SELECT * FROM workOrder ORDER BY `workOrderID` DESC LIMIT 1");
+												$stmt = $conn->query("SELECT * FROM workOrder WHERE greenriverID = '" . $_SESSION['greenriverID'] . "' ORDER BY workOrderID DESC LIMIT 1");
 											      
 												$stmt->setFetchMode(PDO::FETCH_OBJ);									      
 												$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -77,26 +78,28 @@
 													echo "<a href = 'pdfGenerate/pdfGenerate.php?workOrderID=" . $row['workOrderID'] . "' target = '_blank'>Print Work Order</a>";
 													echo "</h3>";
 													
-													 echo "<p>";
-													 echo "<b>First Name: </b>" . $row['first_name'] . "<br>";
-													 echo "<b>Last Name: </b>" . $row['last_name'] . "<br>";
-													 echo "<b>Green River ID: </b>" . $row['greenriverID'] . "<br>";
-													 echo "<b>Email: </b>".$row['email'] . "<br>";
-													 echo "<b>Phone number: </b>" .$row['phone_number'] . " <br>";
-													 echo "<b>Computer Language, English: </b>" . $row['computer_language'] . "<br>";
-													 echo "<b>Computer Username: </b>" . $row['computer_username'] . "<br>";
-													 echo "<b>Computer Password: </b>" . $row['computer_password'] . "<br>";
-													 echo "<b>C-Cleaner Approval: </b>" . $row['ccleaner'] . "<br>";
-													 echo "<b>Customer Initials: </b>" . $row['customer_initials'] . "<br>";
-													 echo "<b>Issues: </b>" . $row['issues'] . "<br>";
-													 echo "<a href = 'index.php'>Return to Tech Shop Website</a> <br>";
-													 echo "<a href = 'https://www.greenriver.edu'>Go to Green River College Website</a>";
-												    }
-												    echo "</p>";
-												}
-												catch(PDOException $e) {
-													echo "Error: " . $e->getMessage();
-												}
+												 }
+											}
+											
+											catch(PDOException $e) {
+												echo "Error: " . $e->getMessage();
+											}
+												
+												echo "<p>";
+												echo "<b>First Name: </b>" . $_SESSION['first_name'] . "<br>";
+												echo "<b>Last Name: </b>" . $_SESSION['last_name'] . "<br>";
+												echo "<b>Green River ID: </b>" . $_SESSION['greenriverID'] . "<br>";
+												echo "<b>Email: </b>" . $_SESSION['email'] . "<br>";
+												echo "<b>Phone Number: </b>" . $_SESSION['phoneNumber'] . "<br>";
+												echo "<b>Computer Language, English: </b>" . $_SESSION['computer_language'] . "<br>";
+												echo "<b>Computer Username: </b>" . $_SESSION['computer_username'] . "<br>";
+												echo "<b>Computer Password: </b>" . $_SESSION['computer_password'] . "<br>";
+												echo "<b>C-Cleaner Approval: </b>" . $_SESSION['cleaner'] . "<br>";
+												echo "<b>Customer Initials: </b>" . $_SESSION['customer_initials'] . "<br>";
+												echo "<b>Issues: </b>" . $_SESSION['issuses'] . "<br>";
+												echo "</p>";
+												
+												//session_destroy();
 										?>
 									</div>
 								</div>
@@ -105,7 +108,11 @@
 
 				<!-- Footer -->
 					<footer id="footer">
+<<<<<<< HEAD
+						<p class="copyright">&copy; 2017 Team SAS</a>.</p>
+=======
                         <p class="copyright">&copy; 2017 Team SAS</a>.</p>
+>>>>>>> origin/master
 					</footer>
 
 			</div>
