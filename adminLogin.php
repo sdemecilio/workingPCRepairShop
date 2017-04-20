@@ -70,7 +70,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<!-- Footer -->
 					<footer id="footer">
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                        <p class="copyright">&copy; 2017 Team SAS</a>.</p>
 					</footer>
 
 			</div>
