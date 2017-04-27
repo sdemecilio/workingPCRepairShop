@@ -140,9 +140,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         //$password ="Capstone2017!";
         //$dbname="pcrepair_shop";
 
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        //$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $for_issues="";
 
