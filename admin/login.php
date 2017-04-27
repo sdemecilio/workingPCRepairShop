@@ -1,7 +1,7 @@
 <?php
 
 //validation for the admin login page
-include ("loginCon.php");
+require('../../databaseConnect.php');
 
 session_start();
 
