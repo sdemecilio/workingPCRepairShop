@@ -77,7 +77,7 @@ if(isset($email, $username, $name, $password, $confpassword, $accessType)){
 
 				<!-- Nav -->
 					<?php
-						include ('adminMenu.php');
+						include('adminMenu.php');
 					?>
 
 				<!-- Main -->

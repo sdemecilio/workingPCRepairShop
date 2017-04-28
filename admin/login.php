@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
 
     <!-- nav bar -->
     <?php
-        include ('mainMenu.php');
+        include('mainMenu.php');
     ?>
     <!-- Main -->
     <div id="main">

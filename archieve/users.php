@@ -62,7 +62,7 @@ catch(PDOException $e) {
     <!-- Nav -->
     <?php
     //include ('newUser.php');
-    include ('adminMenu.php');
+    include('adminMenu.php');
     ?>
 
     <!-- Main -->

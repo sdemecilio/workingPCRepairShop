@@ -25,9 +25,9 @@
     <ul>
         <li><a href="../index.php">Our Story</a></li>
         <li><a href = "../shopRequirements.php">Shop Requirements</a></li>
-        <li><a href="../forms.php">Forms</a></li>
+        <li><a href="forms.php">Forms</a></li>
         <li><a href="../contact.php">Contact</a></li>
-        <li><a href="adminLogin.php" class = "active">Admin Login</a></li>
+        <li><a href="../assets/adminLogin.php">Admin Login</a></li>
     </ul>
 </nav>
      

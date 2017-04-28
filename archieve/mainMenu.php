@@ -20,7 +20,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <html>
 
 <head>
- <link rel = "stylesheet" href = "adminMenu.css">
+ <link rel = "stylesheet" href = "../css/adminMenu.css">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 </head>
@@ -34,10 +34,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
      	
 
      	<li><a href="../index.php">Our Story</a></li>
-        <li><a href="../forms.php">Forms</a></li>
+        <li><a href="forms.php">Forms</a></li>
         <li><a href = "../shopRequirements.php">Shop Requirements</a></li>        
         <li><a href="../contact.php">Contact</a></li>
-        <li><a href="login.php">Admin/Tech Login</a></li>
+        <li><a href="../admin/login.php">Admin/Tech Login</a></li>
    </ul>
    <div class="handle">Menu</div>
 </nav>
