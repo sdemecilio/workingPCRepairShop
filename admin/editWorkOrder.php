@@ -16,8 +16,8 @@
 	require('../../../databaseConnect.php');
 	include('editConn.php');
 	
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	//$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+	//$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	$id = $_GET['workOrderID'];
 
@@ -82,7 +82,7 @@
 											echo "Green River ID: " . $row['greenriverID']  . "<br>";
 											echo "Email: " . $row['email'] . "<br>";
 											echo "Phone Number: " . $row['phone_number'] . "<br>";
-											echo "English Computer Langugage: " . $row['computer_language'] . "<br>";
+											echo "English Computer Language: " . $row['computer_language'] . "<br>";
 											echo "Computer Username: " . $row['computer_username'] . "<br>";
 											echo "Computer Password: " . $row['computer_password'] . "<br>";
 											echo "Ccleaner Removal: " . $row['ccleaner'] . "<br>";
@@ -143,7 +143,7 @@
 			<script src="../assets/js/main.js"></script>
 			<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 			<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-			<script src = "../js/admin.js"></script>
+			<script src = "..js/admin.js"></script>
 </body>
 </html>
 
