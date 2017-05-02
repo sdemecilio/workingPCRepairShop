@@ -77,7 +77,7 @@
                             <div class = "spotlight">
                                 <header class = "major">
                                     <h2>View Work Order</h2>
-                                </header>
+                                </head>
                                 <div class = "content">                                        
                                         <?php
                                             echo "<h3><a href = 'adminSelect.php'> << Back</a></h3>";
