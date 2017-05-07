@@ -66,23 +66,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             <!--Creating form -->
                             <form>
                                 <p>Is this a Mac, Tablet, iPhone, or flash drive that needs to be repaired?<br>
-                                <input type = "radio" name = "type" id = "typeYes">Yes
-                                &nbsp;&nbsp;&nbsp
-                                <input type = "radio" name = "type" id = "typeNo">No
+                                <label><input type = "radio" name = "type" id = "typeYes">Yes</label>                               
+                                <label><input type = "radio" name = "type" id = "typeNo">No</label>
                                 </p>
                                 
                                 <p id = "warranty">Is your computer under warranty?<br>
-                                <input type = "radio" name = "warranty" id = "YesWarranty">Yes
-                                 &nbsp;&nbsp;&nbsp
-                                <input type = "radio" name = "warranty" id = "no">No</p>
+                                <label><input type = "radio" name = "warranty" id = "YesWarranty">Yes</label>                                
+                                <label><input type = "radio" name = "warranty" id = "no">No</label>
+                                </p>
                                 
-                                <p id = "followUp">Is your warranty a software warranty or hardware warranty?<br>
-                                
-                                    <input type = "radio" name = "followUp" id = "Software">Software
-                                     &nbsp;&nbsp;&nbsp
-                                    <input type = "radio" name = "followUp" id = "Hardware">Hardware
-                                     &nbsp;&nbsp;&nbsp
-                                    <input type = "radio" name = "followUp" id = "Unsure">Not sure / Don't know
+                                <p id = "followUp">Is your warranty a software warranty or hardware warranty?<br>                                
+                                <label><input type = "radio" name = "followUp" id = "Software">Software</label>                                     
+                                <label><input type = "radio" name = "followUp" id = "Hardware">Hardware</label>                                     
+                                <label><input type = "radio" name = "followUp" id = "Unsure">Not sure / Don't know</label>
                                 </p>
                                     
                             </form>
