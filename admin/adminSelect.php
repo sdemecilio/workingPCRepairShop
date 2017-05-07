@@ -14,9 +14,8 @@
 	
 	require('../../../databaseConnect.php');
 	
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 	
 	try
 	{
@@ -89,7 +88,7 @@
 													echo "<td>" . $row['last_name'] . "</td>";
 													echo "<td>" . $row['greenRiverID'] . "</td>";
 													echo "<td>" . $row['timestamp'] . "</td>";
-													echo "<td align = 'center'><a href = '#'>View</a></td>";
+													echo "<td align = 'center'><a href = 'viewWorkOrder.php?workOrderID=" . $row['workOrderID'] . "'>View</a></td>";
 													echo "<td align = 'center'><a href = 'editWorkOrder.php?workOrderID=" . $row['workOrderID'] . "'>Edit</a></td>";
 												echo "</tr>";
 											}
