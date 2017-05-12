@@ -35,19 +35,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         }
     }
 
-    //validate email
-    if(empty($_POST['email'])){
-
-        $errors['emailErr'] = "Your email cannot be empty";
-
-    }else{
-        $email= $_POST['email'];
-        if(!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
-            $errors['emailErr']="Invalid email format";
-            $valid=false;
-        }
-    }
-
     //validate grc id
     if(empty($_POST['greenriverID'])){
 
@@ -59,6 +46,45 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $errors['greenriverIDErr']="Invalid GRC ID, numbers only";
             $valid=false;
         }
+    }
+    
+    //validate email
+    if(empty($_POST['email'])){
+
+        $errors['emailErr'] = "Your email cannot be empty";
+
+    }else{
+        $email= $_POST['email'];
+        
+        if(!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)){
+            $errors['emailErr']="Invalid email format";
+            $valid=false;
+        }
+        
+        // get student id number
+        $ID = $_POST['greenriverID'];
+        
+        // if customer has greenriver id
+        if ($ID != null)
+        {
+            // accepted domains
+            $allowed = array('mail.greenriver.edu', 'greenriver.edu');
+        
+            // make sure address is valid
+            if (filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+                $explodeEmail = explode('@', $email);
+                $domain = array_pop($explodeEmail);
+                
+                // error message
+                if (! in_array($domain, $allowed))
+                {
+                    $errors['emailErr'] = "Email must be school email address.";
+                    $valid = false;
+                }
+            }
+        }
+        
     }
 
     //validate phone number
@@ -134,15 +160,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     //if its valid connect to database
     if($valid){
-
-        //$servername="localhost";
-        //$username= "pcrepair";
-        //$password ="Capstone2017!";
-        //$dbname="pcrepair_shop";
-
-        //$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-        //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $for_issues="";
 
