@@ -65,7 +65,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         
                             <!--Creating form -->
                             <form>
-                                <p>Is this a Mac, Tablet, iPhone, or flash drive that needs to be repaired?<br>
+                                <p>Is this a Mac/Apple Product, Tablet, Cell Phone or flash drive that needs to be repaired?<br>
                                 <label><input type = "radio" name = "type" id = "typeYes">Yes</label>                               
                                 <label><input type = "radio" name = "type" id = "typeNo">No</label>
                                 </p>
@@ -83,7 +83,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     
                             </form>
                             
-                            <p id = "errorMessage" class = "requiredFields">We cannot work on your computer. Please see a tech for questions.</p>
+                            <p id = "errorMessage" class = "requiredFields">We cannot work on your device. Please contact the Shop at 253-833-9111 ext 2082.</p>
                             <a class = "btn btn-default" href = "policy.php" id = "proceedToPaperwork">Proceed to paperwork</a>
                     </div>
                 </div>

@@ -12,6 +12,11 @@ $('#typeYes').click(function() {
     $('#no').hide();
     $('#typeNo').show();
     $('#errorMessage').show();
+    $('#proceedToPaperwork').hide();
+    $('#followUp').hide();
+    $('#options').hide();
+    $('#warranty').hide();
+
 });
 
 $('#YesWarranty').click(function() {
@@ -25,6 +30,10 @@ $('#no').click(function() {
     $('#errorMessage').hide();
     $('#followUp').hide();
     $('#options').hide();
+    
+    if ($('#typeYes').click(function() {
+        $('#proceedToPaperwork').hide();
+    }));
 });
 
 $('#Hardware').click(function() {
