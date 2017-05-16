@@ -10,6 +10,10 @@
     
     require ('../../../databaseConnect.php');
     
+    
+    
+	
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $errors = array();
@@ -108,57 +112,60 @@
             }
         }
     
-    if ($valid)
-    {
-        try
-        {
-            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            //grab variables
-            $date_recieve = $_POST['date_recieve'];
-            $receipt_number = $_POST['receipt_number'];
-            $reciving_tech = $_POST['receiving_tech'];
-            $manufacturer = $_POST['manufacturer'];
-            $op_system = $_POST['op_system'];
-            $pc_sn = $_POST['pc_sn'];
-            $model = $_POST['model'];
-            $os_key = $_POST['os_key'];
-            $ledger_dropoff = $_POST['ledger'];
-            $ledger_pickup = $_POST['ledger_pickup'];
-            $work_began = $_POST['work_began'];
-            $work_finished = $_POST['work_finished'];
-            $workOrderID = $_GET['workOrderID'];
-            
-            //sql statement
-            $statement = $conn->prepare("INSERT INTO office_use (workOrderID, date_recieved, receipt_number, receiving_tech, manufacturer, operating_system, pc_sn, model, os_key, ledger_dropoff, ledger_pickup, work_began, work_finished) VALUES (:workOrderID, :date_recieved, :receipt_number, :receiving_tech, :manufacturer, :operating_system, :pc_sn, :model, :os_key, :ledger_dropoff, :ledger_pickup, :work_began, :work_finished)");
-            
-            //bind values
-            $statement->bindParam(':workOrderID', $workOrderID);
-            $statement->bindParam(':date_recieved', $date_recieve);
-            $statement->bindParam(':receipt_number', $receipt_number);
-            $statement->bindParam(':receiving_tech', $reciving_tech);
-            $statement->bindParam(':manufacturer', $manufacturer);
-            $statement->bindParam(':operating_system', $op_system);
-            $statement->bindParam(':pc_sn', $pc_sn);
-            $statement->bindParam(':model', $model);
-            $statement->bindParam(':os_key', $os_key);
-            $statement->bindParam(':ledger_dropoff', $ledger_dropoff);
-            $statement->bindParam(':ledger_pickup', $ledger_pickup);
-            $statement->bindParam(':work_began', $work_began);
-            $statement->bindParam(':work_finished', $work_finished);
-            
-            // execute
-            $statement->execute();
-            
-            echo "Input has been successful!";
-        }
-        
-        catch (PDOException $e)
-        {
-            echo "Error: " . $e->getMessage();
-        }
-    }
+		if ($valid)
+		{
+			try
+			{
+				
+				//grab variables
+				$date_recieve = $_POST['date_recieve'];
+				$receipt_number = $_POST['receipt_number'];
+				$reciving_tech = $_POST['receiving_tech'];
+				$manufacturer = $_POST['manufacturer'];
+				$op_system = $_POST['op_system'];
+				$pc_sn = $_POST['pc_sn'];
+				$model = $_POST['model'];
+				$os_key = $_POST['os_key'];
+				$ledger_dropoff = $_POST['ledger_dropoff'];
+				$ledger_pickup = $_POST['ledger_pickup'];
+				$work_began = $_POST['work_began'];
+				$work_finished = $_POST['work_finished'];
+				$workOrderID = $_GET['workOrderID'];
+				
+				//sql statement
+				$statement = $conn->prepare("INSERT INTO office_use (workOrderID, date_recieved, receipt_number, receiving_tech, manufacturer, operating_system, pc_sn, model, os_key, ledger_dropoff, ledger_pickup, work_began, work_finished) VALUES (:workOrderID, :date_recieved, :receipt_number, :receiving_tech, :manufacturer, :operating_system, :pc_sn, :model, :os_key, :ledger_dropoff, :ledger_pickup, :work_began, :work_finished)");			
+				
+				//bind values
+				$statement->bindParam(':workOrderID', $workOrderID);
+				$statement->bindParam(':date_recieved', $date_recieve);
+				$statement->bindParam(':receipt_number', $receipt_number);
+				$statement->bindParam(':receiving_tech', $reciving_tech);
+				$statement->bindParam(':manufacturer', $manufacturer);
+				$statement->bindParam(':operating_system', $op_system);
+				$statement->bindParam(':pc_sn', $pc_sn);
+				$statement->bindParam(':model', $model);
+				$statement->bindParam(':os_key', $os_key);
+				$statement->bindParam(':ledger_dropoff', $ledger_dropoff);
+				$statement->bindParam(':ledger_pickup', $ledger_pickup);
+				$statement->bindParam(':work_began', $work_began);
+				$statement->bindParam(':work_finished', $work_finished);
+				
+							
+				$statusUpdate = $conn->prepare("UPDATE workOrder SET wo_status = 'Intake' WHERE workOrderID = :workOrderID");
+				$statusUpdate->bindParam(':workOrderID', $workOrderID);
+				
+				// execute
+				$statement->execute();
+				$statusUpdate->execute();
+				
+				
+			}
+			
+			catch (PDOException $e)
+			{
+				//echo "Error: " . $e->getMessage();
+			}
+		}
     }
 
 ?>
