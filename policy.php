@@ -25,7 +25,7 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-
+        <h1>Green River PC Repair Shop</h1>
     </header>
 
         <!-- Main -->
@@ -55,45 +55,45 @@
 
                                 <h4>Repair Policy</h4>
                                 <p>
-                                    <strong> A) </strong> The staff of Green River PC Repair Shop will do everything within our abilities to repair your equipment, however not all computer equipment can be repaired at this location. We are a student run facility and have limited access to diagnostic/repair equipment. If we cannot repair a computer, we will give a full explanation of the situation and provide information detailing our findings. <br>
-                                    <strong> B) </strong> We do not have the ability to order computer parts/software if required for a repair. We are happy to provide you with the information needed to purchase computer parts/ software for your computer. We are willing to install the computer parts/software you provide at no further cost to you.<br>
+                                    <strong> A) </strong> The staff of Green River PC Repair Shop will do everything within our abilities to repair your device. However not all computer equipment can be repaired at this location. We are a student-run facility and have limited access to diagnostic/repair equipment. If we cannot repair your device, we will provide a full explanation of the situation and our findings. <br>
+                                    <strong> B) </strong> We do not have the capability to order computer parts/software if required for a repair. We are happy to provide you with the information needed to purchase computer parts/ software for your computer. We are willing to install the computer parts/software you provide at no additional cost.<br>
                                     <strong> C) </strong>  The staff of Green River PC Repair Shop is not liable for any voided warranties that may arise as a result of any work done on any equipment brought into the shop for repair.<br>
-                                    <strong> D) </strong>  The services provided by the Green River PC Repair Shop are intended for individual and owners of the equipment to be repaired.<br>
-                                    All repairs are done on a first come, first served basis. The staff of the Green River PC Repair Shop cannot guarantee or accommodate a specific date/time for completion of repairs.  </p>
+                                    <strong> D) </strong>  Services provided by the Green River PC Repair Shop are intended for non-commercial purposes and for the legal owners of the equipment to be repaired.<br>
+                                    All repairs are done on a first-come, first-served basis. The staff of the Green River PC Repair Shop cannot guarantee or accommodate a specific date/time for completion of repairs.  </p>
                             
                                 <input type="text" name="repair"  value= "<?php if(isset($_POST['repair'])) echo $_POST['repair']; ?>"   placeholder="Initial">
                                 <div style="color: red" <p><?php if(isset($errors['repairErr'])) echo $errors['repairErr']; ?></p></div>
                                 <hr>
                             
                                 <h4>Payment Policy</h4>
-                                <p>Payment is <strong> a suggested donation </strong> and is not required before any work will be done on equipment. The suggested donation pays for our time spent searching, troubleshooting, and diagnosing computer problems. A further fee is not charged for any repairs we are able to complete.</p>
+                                <p>Payment is <strong> a suggested donation only</strong> and is not required before any work will be done on equipment. The suggested donation pays for our time spent researching, troubleshooting, and diagnosing computer problems. There will be no further labour fee charged for any repairs that we are able to complete.</p>
                                 <input type="text" name="payment"  value= "<?php if(isset($_POST['payment'])) echo $_POST['payment']; ?>"   placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['paymentErr'])) echo $errors['paymentErr']; ?></p></div>
-                                <input type="text" name="payment_amount" value= "<?php if(isset($_POST['payment_amount'])) echo $_POST['payment_amount']; ?>"  placeholder="Amount to pay">
+                                <input type="text" name="payment_amount" value= "<?php if(isset($_POST['payment_amount'])) echo $_POST['payment_amount']; ?>"  placeholder="Amount to donate">
                                 <div style="color: red"<p><?php if(isset($errors['payment_amountErr'])) echo $errors['payment_amountErr']; ?></p></div>
                                 <hr>
                             
                                 <h4>Refund Policy</h4>
-                                <p>The suggested donation is a non-refundable fee to investigate computer problems.</p>
+                                <p>Donations are non-refundable, and are immediately applied to research, repair and shop related expenses.</p>
                                 <input type="text" name="refund" value= "<?php if(isset($_POST['refund'])) echo $_POST['refund']; ?>"  placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['refundErr'])) echo $errors['refundErr']; ?></p></div>
                                 <hr>
 
                                 <h4>Abandoned Property</h4>
-                                <p>Upon completion of work, Green River PC Repair Shop will contact the owner of the equipment. If equipment is not picked up within 90 days after this phone call, all equipment will be considered abandoned, and must be recycled. Green River PC Repair Shop will make due effort to ensure you are contacted when your equipment has been repaired.</p>
+                                <p>Upon completion of work, Green River PC Repair Shop will make a reasonable effort to contact the owner of the equipment based on the contact information provided. If equipment is not picked up within 90 days after this phone call, all equipment will be considered abandoned, and must be recycled. Green River PC Repair Shop will make due effort to ensure you are contacted when your equipment has been repaired.</p>
                                 <input type="text" name="abandoned" value= "<?php if(isset($_POST['abandoned'])) echo $_POST['abandoned']; ?>" placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['abandonedErr'])) echo $errors['abandonedErr']; ?></p></div>
                                 <hr>
 
                                 <h4>Backup Policy</h4>
-                                <p>In order to do backups of your files the Green River PC Repair Shop will need you to supply the storage media needed.<br>
+                                <p>Customer must provide appropriate storage media for any files to be copied from their device.<br>
                                     Example: An external Hard Drive</p>
                                 <input type="text" name="backup" value= "<?php if(isset($_POST['backup'])) echo $_POST['backup']; ?>"  placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['backupErr'])) echo $errors['backupErr']; ?></p></div>
                                 <hr>
 
                                 <h4>Software Policy(newly added)</h4>
-                                <p>The Green River PC Repair Shop will only work on legitimate installations of Windows operating system. Any computer found to have an illegitimate copy of Windows operating system will be return immediately without and further repair.</p>
+                                <p>The Green River PC Repair Shop will only work on legitimate installations of Windows operating system. Any computer found to have an illegitimate copy of Windows operating system will be returned immediately without any further repair.  Donations are non-refundable</p>
                                 <input type="text" name="software" value= "<?php if(isset($_POST['software'])) echo $_POST['software']; ?>"  placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['softwareErr'])) echo $errors['softwareErr']; ?></p></div>
                                 <br><br>

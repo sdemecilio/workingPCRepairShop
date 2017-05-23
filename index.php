@@ -59,31 +59,39 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <section id="intro" class="main">
                 <div class="spotlight">
                     <div class="content">
+                    	<Strong>Please answer some questions to help us better understand your computer problem.</strong>   
+                    	 <br><br>
+                    	                	
                         <header class="major">
                             <h2>Fix My Computer</h2>
                         </header>
                         
                             <!--Creating form -->
                             <form>
+                  
                                 <p>Is this a Mac/Apple Product, Tablet, Cell Phone or flash drive that needs to be repaired?<br>
                                 <label><input type = "radio" name = "type" id = "typeYes">Yes</label>                               
                                 <label><input type = "radio" name = "type" id = "typeNo">No</label>
                                 </p>
                                 
-                                <p id = "warranty">Is your computer under warranty?<br>
+                                <p id = "warranty">Is your computer currently covered by any manufacturer's or retailer's warrantly?<br>
                                 <label><input type = "radio" name = "warranty" id = "YesWarranty">Yes</label>                                
                                 <label><input type = "radio" name = "warranty" id = "no">No</label>
+                                <label><input type = "radio" name = "warranty" id = "Unsure">Not sure</label>                                
                                 </p>
                                 
-                                <p id = "followUp">Is your warranty a software warranty or hardware warranty?<br>                                
+                               <!--<p id = "followUp">Is your warranty a software warranty or hardware warranty?<br>                                
                                 <label><input type = "radio" name = "followUp" id = "Software">Software</label>                                     
                                 <label><input type = "radio" name = "followUp" id = "Hardware">Hardware</label>                                     
-                                <label><input type = "radio" name = "followUp" id = "Unsure">Not sure / Don't know</label>
-                                </p>
+                                <label><input type = "radio" name = "followUp" id = "Unsure">Not sure / Dont know</label>
+                                </p>-->
                                     
                             </form>
                             
-                            <p id = "errorMessage" class = "requiredFields">We cannot work on your device. Please contact the Shop at 253-833-9111 ext 2082.</p>
+                            <p id = "errorMessage" class = "requiredFields">Currently, we do not accept these types of devices for repair. Please contact us at 253-833-9111 ext 2082 for futher information .</p>
+                            
+                            <p id = "errMessageWarranty" class = "requiredFields">Please check with your warranty provider, as any unauthorized repairs not made at an official service center or retailer may void your warranty. We will only accept devices not covered elsewhere, or with a customer signed waiver acknowledging risk of voiding factory warranty. Please contact us at 253-833-9111 ext 2082 for futher information.</p>
+                            
                             <a class = "btn btn-default" href = "policy.php" id = "proceedToPaperwork">Proceed to paperwork</a>
                     </div>
                 </div>
