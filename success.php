@@ -30,13 +30,10 @@
 		<title>Green River Repair Shop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]>
-        <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]>
-        <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
-		<!--[if lte IE 8]>
-        <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<link rel = "stylesheet" href = "css/background.css">
        
 	</head>
@@ -52,7 +49,7 @@
 
 				<!-- Nav -->
 				<?php
-					include('indexMenu.php');
+					include ('indexMenu.php');
 				?>
 
 				<!-- Main -->
@@ -65,7 +62,7 @@
 										<header class="major">
 											<h2>Submission accepted!</h2>
 										</header>
-										<p>Your submission was accepted. Please review the information to verify that it is correct. </p>
+										<p><strong>Thank you for your submission, you can expect to hear from a Green River PC Repair Shop technician within 24 business hours, or you can contact us immediately to arrange a drop-off. </p></strong>
 
 										<?php											
 											try{
@@ -111,11 +108,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-<<<<<<< HEAD
 						<p class="copyright">&copy; 2017 Team SAS</a>.</p>
-=======
-                        <p class="copyright">&copy; 2017 Team SAS</a>.</p>
->>>>>>> origin/master
 					</footer>
 
 			</div>
@@ -126,8 +119,7 @@
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]>
-        <script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
 	</body>
