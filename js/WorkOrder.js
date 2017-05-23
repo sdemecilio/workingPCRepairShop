@@ -1,7 +1,8 @@
 $('#other_text').hide();
 
+
 $('#other').click(function() {
-    $('#other_text').show();
+    $('#other_text').toggle();
 });
 
 function showHideGRCID() {
@@ -19,4 +20,6 @@ function showHideGRCID() {
     }
     
 };
+
+
 

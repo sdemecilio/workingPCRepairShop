@@ -21,9 +21,10 @@ $('#typeYes').click(function() {
 
 $('#YesWarranty').click(function() {
     $('#proceedToPaperwork').hide();
-    $('#errMessageWarranty').show
+    $('#errMessageWarranty').show();
     $('#followUp').show();
     $('#options').show();
+         
 });
 
 $('#no').click(function() {
@@ -35,26 +36,27 @@ $('#no').click(function() {
     if ($('#typeYes').click(function() {
         $('#proceedToPaperwork').hide();
     }));
-    
-     if ($('#YesWarranty').click(function() {
+       if ($('#YesWarranty').click(function() {
         $('#proceedToPaperwork').hide();
-    }));    
+    }));      
 });
 
-$('#Hardware').click(function() {
-    $('#errorMessage').show();
-    $('#proceedToPaperwork').hide();
-});
 
-$('#Software').click(function() {
-    $('#proceedToPaperwork').show();
-    $('#errorMessage').hide();
-});
 
-$('#Unsure').click(function() {
-    $('#proceedToPaperwork').show();
-    $('#errorMessage').hide();
-});
+//$('#Hardware').click(function() {
+//    $('#errorMessage').show();
+//    $('#proceedToPaperwork').hide();
+//});
+//
+//$('#Software').click(function() {
+//    $('#proceedToPaperwork').show();
+//    $('#errorMessage').hide();
+//});
+//
+//$('#Unsure').click(function() {
+//    $('#proceedToPaperwork').show();
+//    $('#errorMessage').hide();
+//});
 
 // the following are messages and questions that are hidden when the page loads
 $('#errMessageWarranty').hide();
