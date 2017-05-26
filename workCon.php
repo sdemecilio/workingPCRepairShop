@@ -98,6 +98,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $valid=false;
         }
     }
+    
+    if (empty($_POST['computer_language'])) {
+        $errors['comp_lanaguageError'] = "You must put what your computer's language is set to.";
+        $valid = false;
+    }
 
     //validate username
     if(empty($_POST['computer_username'])){

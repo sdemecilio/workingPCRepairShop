@@ -79,10 +79,10 @@ include 'workCon.php';
                         <!-- Computer information for work order -->
                         <fieldset id="computerInfo">
                             <legend><strong>Computer Information</strong></legend><br>
-                            <p>Is your computer language English?
-                                <label><input type = "radio" name = "computer_language" id = "computer_language_yes" value="Yes" <?php if (isset($_POST['computer_language']) && $_POST['computer_language']=='yes') {echo 'checked="checked"';}?> >Yes</label>
-                                <label><input type = "radio" name = "computer_language" id = "computer_language_no" value="No" <?php if (isset($_POST['computer_language']) && $_POST['computer_language']=='no') {echo 'checked="checked"';}?> >No</label>
-                            <div style="color: red"><p><?php if(isset($errors['computer_languageErr'])) echo $errors['computer_languageErr']; ?></p></div>
+                            <p>What language is your computer set to?
+                            <input type = "text" name = "computer_language" id = "comp_language">
+                            &nbsp;&nbsp;
+                            <div style="color: red"><p><?php if(isset($errors['comp_lanaguageError'])) echo $errors['comp_lanaguageError']; ?></p></div>
                             </p>
                             <p>
                             <label id="user" for="username">Username:</label> <input type = "text" name = "computer_username" id = "computer_username" value= "<?php if(isset($_POST['computer_username'])) echo $_POST['computer_username']; ?>">
@@ -94,7 +94,7 @@ include 'workCon.php';
                             </p>
                             <p>
                                 <b>CCleaner:</b> is a freeware system optimization, privacy and cleaning tool that we will install and run on your computer during our mainteance/tune-up activities. It removes unused files from your system allowing Windows to run faster and free up valuable hard disk space. <br>
-                                You may already have preferred software with similar functionality installed and not need CCleaner. However, if you do not already have a similar program, we recommed you KEEP and preiodically run this to keep your machine well-maintained. <br>
+                                You may already have preferred software with similar functionality installed and not need CCleaner. However, if you do not already have a similar program, we recommend you KEEP and periodically run this to keep your machine well-maintained. <br>
                                 When we have completed maintenance, do you want CCleaner removed from your computer?
                                 <label><input type = "radio" name = "ccleaner" id = "ccleaner_yes" value="yes" <?php if (isset($_POST['ccleaner']) && $_POST['ccleaner']=='yes') {echo 'checked="checked"';}?>>Yes</label>
                                 <label><input type = "radio" name = "ccleaner" id = "ccleaner_no" value="no" <?php if (isset($_POST['ccleaner']) && $_POST['ccleaner']=='no') {echo 'checked="checked"';}?>>No</label>
@@ -124,7 +124,7 @@ include 'workCon.php';
                         <label><input type = "checkbox" name = "issues[]" value = "Mother Board">Mother Board</label>
                         <label><input type = "checkbox" name = "issues[]" value = "Software">Software</label>
                         <label><input type ="checkbox" name = "issues[]" value = "Other-" id = "other">Other</label>
-                        <input type = "text" name = "other_text" id = "other_text" placeholder = "Please explain your problem">
+                        <input type = "text" name = "issues[]" id = "other_text" placeholder = "Please explain your problem">
 
                         <p>
                             <input type = "submit" name = "submit" value = "Submit form" id = "submit">

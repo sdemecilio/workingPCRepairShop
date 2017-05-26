@@ -5,6 +5,16 @@ $('#other').click(function() {
     $('#other_text').toggle();
 });
 
+$('#student_faculty_yes').click(function() {
+    $('#grcID').show();
+    $('#greenriverID').show();
+    
+});
+
+$('#student_faculty_no').click(function() {
+    showHideGRCID();
+});
+
 function showHideGRCID() {
 
     if(document.getElementById('student_faculty_no').checked){

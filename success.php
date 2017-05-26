@@ -91,7 +91,7 @@
 												echo "<b>Green River ID: </b>" . $_SESSION['greenriverID'] . "<br>";
 												echo "<b>Email: </b>" . $_SESSION['email'] . "<br>";
 												echo "<b>Phone Number: </b>" . $_SESSION['phoneNumber'] . "<br>";
-												echo "<b>Computer Language, English: </b>" . $_SESSION['computer_language'] . "<br>";
+												echo "<b>Computer Language: </b>" . $_SESSION['computer_language'] . "<br>";
 												echo "<b>Computer Username: </b>" . $_SESSION['computer_username'] . "<br>";
 												echo "<b>Computer Password: </b>" . $_SESSION['computer_password'] . "<br>";
 												echo "<b>C-Cleaner Approval: </b>" . $_SESSION['cleaner'] . "<br>";
