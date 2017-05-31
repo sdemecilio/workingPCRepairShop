@@ -188,3 +188,29 @@ Stack trace:
 #2 /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php(138): FPDF->Output()
 #3 {main}
   thrown in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php on line 271
+[16-Apr-2017 03:27:13 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php on line 75
+[16-Apr-2017 03:27:13 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php:20)' in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php:271
+Stack trace:
+#0 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php(131): FPDF->Output()
+#3 {main}
+  thrown in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php on line 271
+[16-Apr-2017 03:53:02 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php on line 75
+[16-Apr-2017 03:53:02 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php:20)' in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php:271
+Stack trace:
+#0 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php(131): FPDF->Output()
+#3 {main}
+  thrown in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php on line 271
+[18-Apr-2017 23:47:04 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php on line 75
+[18-Apr-2017 23:47:04 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php:20)' in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php:271
+Stack trace:
+#0 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/pcrepair/public_html/working/pdfGenerate/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php(131): FPDF->Output()
+#3 {main}
+  thrown in /home/pcrepair/public_html/working/pdfGenerate/fpdf.php on line 271
+[31-May-2017 04:17:49 America/Chicago] PHP Parse error:  syntax error, unexpected '$pdf' (T_VARIABLE) in /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php on line 81
+[31-May-2017 04:32:11 America/Chicago] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /home/pcrepair/public_html/working/pdfGenerate/pdfGenerate.php on line 95
