@@ -1,7 +1,7 @@
 <?php
 
 //validation for the admin login page
-require('../../databaseConnect.php');
+require('../../../databaseConnect.php');
 
 session_start();
 
@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
     $password = md5($_POST['password'] . "ALS52KAO09");
 
     //running SQL query
-    $sql = $conn->prepare("SELECT * from logins WHERE  username = ? OR password = ?");
+    $sql = $conn->prepare("SELECT * from logins WHERE  username = ? AND password = ?");
     $query = $sql->execute(array(
         $username,
         $password
@@ -18,12 +18,14 @@ if(isset($_POST['submit'])) {
 
     //getting each row
     $count = $sql->rowCount();
+
     if ($count == 1) {
         $_SESSION['username'] = $username;
         header("Location:adminSelect.php");
-        return;
+        exit;
     } else {
-        echo "You entered the incorrect login";
+        $message = "You enetered the incorrect login";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
 }
 ?>
@@ -52,7 +54,7 @@ if(isset($_POST['submit'])) {
 
     <!-- nav bar -->
     <?php
-        include('mainMenu.php');
+        include ('adminMenu.php');
     ?>
     <!-- Main -->
     <div id="main">
@@ -74,6 +76,7 @@ if(isset($_POST['submit'])) {
                                 <td><input type="password" name="password"></td>
                             </tr>
                         </table>
+                        <p><a href="http://pc-repair.greenrivertech.net/working/admin/forgotPassword.php">Forgot password?</p>
                         <input type="submit" name="submit">
                       </form>
         </section>
