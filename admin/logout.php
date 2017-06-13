@@ -1,6 +1,9 @@
 <?php
 //log out
 session_start();
-session_destroy();
+
 header("Location:login.php");
+unset($_SESSION['accessType']);
+
+session_destroy();
 ?>

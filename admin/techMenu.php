@@ -32,7 +32,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <nav>
      <ul>
         <li><a href="../index.php">Home</a></li>
-        <li><a href="adminSelect.php" class = "active">Work Order List</a></li>
+        <li><a href="adminSelect2.php" class = "active">Work Order List</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
    <div class="handle">Menu</div>

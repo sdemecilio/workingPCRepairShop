@@ -28,7 +28,6 @@
 <body>
 <!--Creating nav bar -->
 
-
 <nav>
      <ul>
      	

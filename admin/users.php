@@ -15,9 +15,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //incuding connection to the database
 require('../../../databaseConnect.php');
 
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+session_start();
 
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if ($_SESSION['username'] == null)
+{
+    header("Location:login.php");
+}
 
 try
 {
@@ -25,7 +28,6 @@ try
     $stmt = $conn->query("SELECT * FROM logins");
 
     $stmt->setFetchMode(PDO::FETCH_OBJ);
-    //$stmt->execute();
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -33,7 +35,10 @@ catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
 
+
 ?>
+
+
 
 <html>
 <head>
@@ -61,7 +66,6 @@ catch(PDOException $e) {
 
     <!-- Nav -->
     <?php
-    //include ('newUser.php');
     include ('adminMenu.php');
     ?>
 
@@ -75,7 +79,6 @@ catch(PDOException $e) {
                 echo "<table id = 'display_table' class = 'display'>";
                 echo "<thead>";
                 echo "<tr>";
-                echo "<th>User Id</th>";
                 echo "<th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Access Type</th>";
@@ -87,7 +90,6 @@ catch(PDOException $e) {
                 {
                     //echo "connected!";
                     echo "<tr>";
-                    echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
                     echo "<td>" . $row['email']. "</td>";
                     echo "<td>" . $row['accessType'] . "</td>";

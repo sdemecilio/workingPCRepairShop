@@ -5,10 +5,8 @@ require('../../../databaseConnect.php');
 
     if (isset($_POST["forgotPass"])) {
         try {
-
             $email = $_POST["email"];
             $sql = $conn->prepare("SELECT id FROM logins WHERE 'email=$email'");
-            //echo $email;
             $query = $sql->execute();
 
         } catch (PDOException $e) {
@@ -34,8 +32,6 @@ require('../../../databaseConnect.php');
     }
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html>

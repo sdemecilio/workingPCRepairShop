@@ -2,6 +2,7 @@
 //including db connection
 include 'workCon.php';
 
+
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +44,14 @@ include 'workCon.php';
                     <!--Creating the work order form-->
                     <form id = "community_form" method = "post" action = "">
                         <!-- Customer information for work order -->
+                        
                         <fieldset id="customerInfo">
                             <legend><strong>Customer Information</strong></legend><br>
                             <p>Are you a Green River student or faculty member?</p>
                                 <label><input type = "radio" id = "student_faculty_yes" name = "student_faculty" value="yes" <?php if (isset($_POST['student_faculty']) && $_POST['student_faculty']=='yes') {echo 'checked="checked"';}?> onclick="showHideGRCID()">Yes</label> 
                                 
                         <label><input type = "radio" id = "student_faculty_no" name = "student_faculty" value="no" <?php if (isset($_POST['student_faculty']) && $_POST['student_faculty']=='no') {echo 'checked="checked"';}?> onclick="showHideGRCID()">No</label>
-                            <div style="color: red"><p><?php if(isset($errors['student_facultyErr'])) echo $errors['student_facultyErr']; ?></p></div>
+                            <div id="errors" style="color: red"><p><?php if(isset($errors['student_facultyErr'])) echo $errors['student_facultyErr']; ?></p></div>
                             
 
                             <p> 
@@ -61,8 +63,8 @@ include 'workCon.php';
                                     &nbsp;&nbsp;
                             <div style="color: red"><p><?php if(isset($errors['last_nameErr'])) echo $errors['last_nameErr']; ?></p></div>
                             
-                            <label id="grcID" for="greenriverID">Green River ID:</label> <input type = "text" name = "greenriverID" id = "greenriverID" value= "<?php if(isset($_POST['greenriverID'])) echo $_POST['greenriverID']; ?>">
-                            <div style="color: red"><p><?php if(isset($errors['greenriverIDErr'])) echo $errors['greenriverIDErr']; ?></p></div>
+                            <label id="grcID" for="greenriverID">Green River ID:</label> <input type = "text" name = "greenriverID" id = "greenriverID" value= "<?php if(isset($_POST['greenriverID'])) echo $_POST['greenriverID']; ?>" onclick="myFunction()">
+                            <div id="error" style="color: red"><p><?php if(isset($errors['greenriverIDErr'])) echo $errors['greenriverIDErr']; ?></p></div>
                             </p>
 
                             <p>
@@ -77,6 +79,7 @@ include 'workCon.php';
                         <br>
 
                         <!-- Computer information for work order -->
+                        
                         <fieldset id="computerInfo">
                             <legend><strong>Computer Information</strong></legend><br>
                             <p>What language is your computer set to?
@@ -107,7 +110,9 @@ include 'workCon.php';
                         <br>
 
                         <!-- Issues with computer, user will check all that apply -->
-                        <p>Type of Issues <br>
+                        
+                        <p><b>Type of Issues</b> <br>
+                        <div style="color: red"><p><?php if(isset($errors['issueErr'])) echo $errors['issuesErr']; ?></p></div>
                         <label><input type = "checkbox" name = "issues[]" value = "AC Adapter">AC Adapter</label>
                         <label><input type = "checkbox" name = "issues[]" value = "Keyboard">Keyboard</label>
                         <label><input type = "checkbox" name = "issues[]" value = "Heat Sink">Heat Sink</label>

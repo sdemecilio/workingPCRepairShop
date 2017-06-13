@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Axum
- * Date: 2/17/2017
- * Time: 11:09 AM
- */
-?>
-
 
 <?php
 /**
@@ -74,11 +65,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 <label><input type = "radio" name = "type" id = "typeNo">No</label>
                                 </p>
                                 
-                                <p id = "warranty">Is your computer currently covered by any manufacturer's or retailer's warrantly?<br>
+                                <p id = "warranty">Is your computer currently covered by any manufacturer's or retailer's warranty?<br>
                                 <label><input type = "radio" name = "warranty" id = "YesWarranty">Yes</label>                                
                                 <label><input type = "radio" name = "warranty" id = "no">No</label>
-                                <label><input type = "radio" name = "warranty" id = "Unsure">Not sure</label>                                
-                                </p>
+                                <label><input type = "radio" name = "warranty" id = "Unsure">Not sure</label>                         </p>
+								
+								<p id = "errMessageWarranty" class = "requiredFields">Please check with your warranty provider, as any unauthorized repairs not made at an official service center or retailer may void your warranty. We will only accept devices not covered elsewhere, or with a customer signed waiver acknowledging risk of voiding factory warranty. Please contact us at 253-833-9111 ext 2082 for futher information.</p>
+								
+								<p id = "compLanguage">Is your computer language English?<br>
+								<label><input type = "radio" name = "compLanguage" id = "compYes">Yes</label>
+								<label><input type = "radio" name = "compLanguage" id = "compNo">No</label>
+								</p>
+								
+								<p id = "languageWarning">
+									If your computer is not in English, we may not be able to fix it. We will only accept a computer if we have a tech that knows and understands the language your computer is set to. For questions or further information please contact us at 253-833-9111 ext 2082
+								</p>
                                 
                                <!--<p id = "followUp">Is your warranty a software warranty or hardware warranty?<br>                                
                                 <label><input type = "radio" name = "followUp" id = "Software">Software</label>                                     
@@ -89,9 +90,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             </form>
                             
                             <p id = "errorMessage" class = "requiredFields">Currently, we do not accept these types of devices for repair. Please contact us at 253-833-9111 ext 2082 for futher information .</p>
-                            
-                            <p id = "errMessageWarranty" class = "requiredFields">Please check with your warranty provider, as any unauthorized repairs not made at an official service center or retailer may void your warranty. We will only accept devices not covered elsewhere, or with a customer signed waiver acknowledging risk of voiding factory warranty. Please contact us at 253-833-9111 ext 2082 for futher information.</p>
-                            
+							
+
                             <a class = "btn btn-default" href = "policy.php" id = "proceedToPaperwork">Proceed to paperwork</a>
                     </div>
                 </div>

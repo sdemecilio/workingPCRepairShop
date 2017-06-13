@@ -1,7 +1,14 @@
 <?php
 /// connection
-require('../../databaseConnect.php');
+require('../../../databaseConnect.php');
 
+session_start();
+
+if ($_SESSION['username'] == null)
+{
+	header('Location:login.php');
+}
+   	
 //validating user input
 $email= $_POST['email'];
 $name= $_POST['name'];
@@ -41,17 +48,25 @@ if(isset($email, $username, $name, $password, $confpassword, $accessType)){
             }else{
                 echo "A user already exist with the username";
                 }
-        }else{
+        }
+		else
+		{
             echo "Your passwords do not match";
-            }
+        }
 
-    }else{
+    }
+	else
+	{
         echo "Invalid email address";
     }
+    	
 }
+		
 
 ?>
 
+
+ 
 <!DOCTYPE html>
 <html>
 <head>

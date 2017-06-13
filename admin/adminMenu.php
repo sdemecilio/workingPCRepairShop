@@ -15,9 +15,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /** Side bar navigation code from: http://www.w3schools.com/howto/howto_js_sidenav.asp **/
 ?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
  <link rel = "stylesheet" href = "../css/adminMenu.css">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -26,10 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  
 <body>
 <!--Creating nav bar -->
-
-
 <nav>
-   
      <ul>
         <li><a href="../index.php">Home</a></li>
         <li><a href="adminSelect.php" class = "active">Work Order List</a></li>
@@ -37,7 +34,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <li><a href="../admin/register.php">Add User</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
-  
    <div class="handle">Menu</div>
 </nav>
 
@@ -51,3 +47,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 </body>
 </html> 
+

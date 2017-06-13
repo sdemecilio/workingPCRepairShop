@@ -192,34 +192,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $stmt=$conn->prepare("INSERT into workOrder (student_faculty,first_name,last_name,greenriverID,email,phone_number,computer_language,computer_username,computer_password,ccleaner,customer_initials,issues) values(:student_faculty,:first_name,:last_name,:greenriverID,:email, :phone_number, :computer_language, :computer_username, :computer_password, :ccleaner, :customer_initials, :issues)");
 		//echo 'phone'.$phone_number;
             //Bind Values
-            $stmt->bindParam(':student_faculty',$student_faculty);
-            $stmt->bindParam(':first_name',$first_name);
-            $stmt->bindParam(':last_name',$last_name);
-            $stmt->bindParam(':greenriverID',$greenriverID);
-            $stmt->bindParam(':phone_number',$phone_number);
-            $stmt->bindParam(':email',$email);
-            $stmt->bindParam(':computer_language',$computer_language);
-            $stmt->bindParam(':computer_username',$computer_username);
-            $stmt->bindParam(':computer_password',$computer_password);
-            $stmt->bindParam(':ccleaner',$ccleaner);
-            $stmt->bindParam(':customer_initials',$customer_initials);
-            $stmt->bindParam(':issues',$for_issues);
-
+	          $stmt->bindParam(':student_faculty',$student_faculty);
+	          $stmt->bindParam(':first_name',$first_name);
+	          $stmt->bindParam(':last_name',$last_name);
+	          $stmt->bindParam(':greenriverID',$greenriverID);
+	          $stmt->bindParam(':phone_number',$phone_number);
+	          $stmt->bindParam(':email',$email);
+	          $stmt->bindParam(':computer_language',$computer_language);
+	          $stmt->bindParam(':computer_username',$computer_username);
+	          $stmt->bindParam(':computer_password',$computer_password);
+	          $stmt->bindParam(':ccleaner',$ccleaner);
+	          $stmt->bindParam(':customer_initials',$customer_initials);
+	          $stmt->bindParam(':issues',$for_issues);
+	
             //Execute
             $stmt->execute();
             
-                    // Session variables
-        $_SESSION['first_name'] = $first_name;
-        $_SESSION['last_name'] = $last_name;
-        $_SESSION['greenriverID'] = $greenriverID;
-        $_SESSION['email'] = $email;
-        $_SESSION['phoneNumber'] = $phone_number;
-        $_SESSION['computer_language'] = $computer_language;
-        $_SESSION['computer_username'] = $computer_username;
-        $_SESSION['computer_password'] = $computer_password;
-        $_SESSION['cleaner'] = $ccleaner;
-        $_SESSION['customer_initials'] = $customer_initials;
-        $_SESSION['issuses'] = $for_issues;
+             // Session variables
+	        $_SESSION['first_name'] = $first_name;
+	        $_SESSION['last_name'] = $last_name;
+	        $_SESSION['greenriverID'] = $greenriverID;
+	        $_SESSION['email'] = $email;
+	        $_SESSION['phoneNumber'] = $phone_number;
+	        $_SESSION['computer_language'] = $computer_language;
+	        $_SESSION['computer_username'] = $computer_username;
+	        $_SESSION['computer_password'] = $computer_password;
+	        $_SESSION['cleaner'] = $ccleaner;
+	        $_SESSION['customer_initials'] = $customer_initials;
+	        $_SESSION['issuses'] = $for_issues;
 
             //redirect to work order
             header("location: success.php");

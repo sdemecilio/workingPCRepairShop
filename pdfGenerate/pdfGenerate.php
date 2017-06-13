@@ -99,7 +99,7 @@
         $pdf->Cell(20, 60, 'Computer Password: ' . $row['computer_password']);
         
         $pdf->Ln(10);
-        $pdf->Cell(105, 60, 'Ccleaner Removmal: ' . $row['ccleaner']);
+        $pdf->Cell(105, 60, 'Ccleaner Removal: ' . $row['ccleaner']);
         $pdf->Cell(50, 60, 'Customer Initials: ' . $row['customer_initials']);
         
         $pdf->Ln(10);
@@ -115,7 +115,7 @@
         $pdf->Cell(215, 45, 'RELEASE AND HOLD HARMLESS AGREEMENT', 0, 0, 'C');
         
         $pdf->Ln(30);
-        $pdf->MultiCell(195, 5, 'The Green River PC Repair Shop will not be held liable for ANY services performed on ANY equipment recieved by the Party or Parties below. Further, if we are unable to repair any equipment received, the Green River PC Repair Shop or its members, will not be responsible for replacing hardware, software, or information lost or damaged during diagnostics of, and ore repairing of the equipment received from any inteded parties.');
+        $pdf->MultiCell(195, 5, 'The Green River PC Repair Shop will not be held liable for ANY services performed on ANY equipment received by the Party or Parties below. Further, if we are unable to repair any equipment received, the Green River PC Repair Shop or its members, will not be responsible for replacing hardware, software, or information lost or damaged during diagnostics of, and are repairing of the equipment received from any inteded parties.');
         
         $pdf->Ln(3);
         $pdf->SetFont('Times', 'B', 14);

@@ -97,7 +97,8 @@
                                 <input type="text" name="software" value= "<?php if(isset($_POST['software'])) echo $_POST['software']; ?>"  placeholder="Initial">
                                 <div style="color: red"<p><?php if(isset($errors['softwareErr'])) echo $errors['softwareErr']; ?></p></div>
                                 <br><br>
-                            
+                                
+                            	<!-- creating a submit button-->
                                 <input type="submit" name="submit" class="submit" value="Submit">
                             
                             </form>

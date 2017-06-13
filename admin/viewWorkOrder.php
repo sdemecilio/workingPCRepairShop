@@ -20,21 +20,31 @@
     require('../../../databaseConnect.php');
 	include('beginWorkCon.php');
     
+	session_start();
+	
+	// prevent unathorized access
+	if ($_SESSION['username'] == null)
+	{
+		header('Location:login.php');
+	}
   
 	
-	    // selection variable
+	// selection variable
     $id = $_GET['workOrderID'];
     
     try
     {
          $statement = $conn->query ("SELECT * FROM workOrder WHERE workOrderID =" . $id);
-         $office_use = $conn->query ("SELECT * FROM office_use WHERE workOrderID = ". $id); 
-		 
+         $office_use = $conn->query ("SELECT * FROM office_use WHERE workOrderID = ". $id);
+		$stmtResult = $conn->query("SELECT accessType FROM logins WHERE username = '" . $_SESSION['username'] . " ' ");
+		
          $statement->setFetchMode(PDO::FETCH_OBJ);
          $office_use->setFetchMode(PDO::FETCH_OBJ);
+		$stmtResult->setFetchMode(PDO::FETCH_OBJ);
          
          $result = $statement->fetchAll(PDO::FETCH_ASSOC);
          $office_result = $office_use->fetchAll(PDO::FETCH_ASSOC);
+		$accessResult = $stmtResult->fetchAll(PDO::FETCH_ASSOC);
     }
     
     catch (PDOException $e)
@@ -58,7 +68,7 @@
 		<link rel = "stylesheet" href = "../css/admin.css">
 	</head>
 	
-	<body>
+		<body>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -70,8 +80,18 @@
                     
                     <!-- Nav -->
                     <?php
-                        include ('adminMenu.php');
-                    ?>
+						foreach($accessResult as $row)
+						{
+							if($row['accessType'] == 'tech')
+							{
+								include('techMenu.php');
+							}
+							else
+							{
+								include('adminMenu.php');
+							}
+						}
+					?>
                     
                     <!-- Main -->
                     <div id = "main">
@@ -207,7 +227,3 @@
 			<script src = "../js/viewWorkOrder.js"></script>
     </body>
 </html>
-                
-                        
-                    
-                                        

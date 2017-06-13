@@ -15,13 +15,12 @@
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	
 	 */
+	 //connecting to db
 	require('../../databaseConnect.php');
 
 	session_start();
 
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
 
 ?>
 
@@ -50,6 +49,7 @@
 				<!-- Nav -->
 				<?php
 					include ('indexMenu.php');
+					
 				?>
 
 				<!-- Main -->
@@ -85,6 +85,7 @@
 												echo "Error: " . $e->getMessage();
 											}
 												
+												//echoing out the information from the db
 												echo "<p>";
 												echo "<b>First Name: </b>" . $_SESSION['first_name'] . "<br>";
 												echo "<b>Last Name: </b>" . $_SESSION['last_name'] . "<br>";
@@ -101,10 +102,16 @@
 												
 												//session_destroy();
 										?>
+										
+										//redirecting to a different page
+										<?php
+										 echo "<a href = 'successEdit.php?workOrderID=" . $row['workOrderID'] . "' target = '_blank'>Edit Work Order</a>";
+										 ?>
 									</div>
 								</div>
 							</section>
 					</div>
+					 
 
 				<!-- Footer -->
 					<footer id="footer">

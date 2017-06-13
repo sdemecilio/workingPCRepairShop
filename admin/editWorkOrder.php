@@ -16,8 +16,12 @@
 	require('../../../databaseConnect.php');
 	include('editConn.php');
 	
-	//$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	//$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	session_start();
+	
+	if ($_SESSION['username'] == null)
+	{
+		header('Location:login.php');
+	}
 	
 	$id = $_GET['workOrderID'];
 
@@ -25,10 +29,13 @@
 	{
 		//Selecting data 
 		$stmt = $conn->query("SELECT * FROM workOrder WHERE workOrderID =" . $id);
+		$stmtResult = $conn->query("SELECT accessType FROM logins WHERE username = '" . $_SESSION['username'] . " ' ");
 	  
 		$stmt->setFetchMode(PDO::FETCH_OBJ);
+		$stmtResult->setFetchMode(PDO::FETCH_OBJ);
 
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$accessResult = $stmtResult->fetchAll(PDO::FETCH_ASSOC);
 	}
 	 catch(PDOException $e) {
 	 echo "Error: " . $e->getMessage();	
@@ -62,7 +69,17 @@
 
 				<!-- Nav -->
 					<?php
-						include ('adminMenu.php');
+						foreach ($accessResult as $row)
+						{
+							if($row['accessType'] == 'tech')
+							{
+								include ('techMenu.php');
+							}
+							else
+							{
+								include ('adminMenu.php');
+							}
+						}
 					?>
 
 				<!-- Main -->
@@ -111,9 +128,11 @@
 										<div class = "error"><?php if (isset($_POST['model'])) { echo $errors['model'];} ?></div>
 										OS Key: <input type = "text" id = "os_key" name = "os_key">
 										<div class = "error"><?php if (isset($_POST['os_key'])) { echo $errors['os_key'];} ?></div>
-										Ledger (Initialed) dropped off: <input type = "text" id = "ledger" name = "ledger"
-										<div class = "error"><?php if (isset($_POST['ledger'])) { echo $errors['ledger'];} ?></div>
-										Ledger (Initialed) picked up: <input type = "text" id = "ledger_pickup" name = "ledger_pickup"><br>
+										Ledger (Initialed) dropped off: <label><input type = "radio" name = "ledger_dropoff" id = "ledger_dropoff_yes" value="Yes" <?php if (isset($_POST['ledger_dropoff']) && $_POST['ledger_dropoff']=='Yes') {echo 'checked="checked"';}?> >Yes</label>
+										<label><input type = "radio" name = "ledger_dropoff" id = "ledger_dropoff_no" value="No" <?php if (isset($_POST['ledger_dropoff']) && $_POST['ledger_dropoff']=='No') {echo 'checked="checked"';}?> >No</label>
+										
+										Ledger (Initialed) picked up:<label><input type = "radio" name = "ledger_pickup" value = "Yes" <?php if (isset($_POST['ledger_pickup']) && $_POST['ledger_pickup']=='Yes') {echo 'checked="checked"';}?> >Yes</label>
+										<label><input type = "radio" name = "ledger_pickup" value = "No" <?php if (isset($_POST['ledger_pickup']) && $_POST['ledger_pickup']=='No') {echo 'checked="checked"';}?> >No</label>
 										Date Work Began: <input type = "date" id = "work_began" name = "work_began">
 										Date Work Finished: <input type = "date" id = "work_finished" name = "work_finished"><br><br>
 										
